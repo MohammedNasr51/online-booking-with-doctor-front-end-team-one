@@ -1,13 +1,14 @@
 
 import './App.css'
-import MainPage from './components/MainPage'
 
 function App() {
 
 
   return (
     <>
-     <MainPage/>
+      <h1 className="text-3xl font-bold ">
+      Hello world!
+    </h1>
     </>
   )
 }
