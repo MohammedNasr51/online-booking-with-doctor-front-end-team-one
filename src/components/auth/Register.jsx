@@ -3,15 +3,23 @@ import HeartImg from "../../assets/icons/BsHeartPulse.png";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
 import FacebookImg from "../../assets/icons/FacebookImg.png";
 import AppleImg from "../../assets/icons/AppleImg.png";
+import ArrowLeft from "../../assets/icons/ArrowLeft.png";
 import CurveRight from "../../assets/images/CurveRight.png";
 import LineCurve from "../../assets/images/LineCurve.png";
 import { Link } from "react-router";
 function Register() {
   return (
     <div className="relative flex flex-col h-screen items-center justify-center">
-      <div className="absolute left-[20%] z-10">
+      <div className="md:absolute left-[20%] z-10">
+        <Link to="/onboarding2">
+          <img
+            className="block md:hidden"
+            src={ArrowLeft}
+            alt="SmallHeartImg"
+          />
+        </Link>
         <img
-          className="absolute -left-32 -top-16 w-[32px] h-[32px]"
+          className=" absolute md:-left-32 md:-top-16 left-auto w-[32px] h-[32px]"
           src={HeartImg}
           alt="HeartImg"
         />
@@ -69,7 +77,10 @@ function Register() {
               </span>
             </label>
           </div>
-          <Link to="/register" className="bg-[#145DB8] py-3 px-3 text-white rounded-md">
+          <Link
+            to="/register"
+            className="bg-[#145DB8] py-3 px-3 text-white rounded-md"
+          >
             Create an account
           </Link>
           <div className="flex items-center gap-4 my-6">
@@ -90,7 +101,9 @@ function Register() {
           </ul>
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#99A2AB]">Already have an account!</p>
-            <Link to="/login" className="text-[#145DB8]">Sign in</Link>
+            <Link to="/login" className="text-[#145DB8]">
+              Sign in
+            </Link>
           </div>
         </form>
       </div>
