@@ -38,7 +38,6 @@ export default function Profile() {
           />
         </Modal>
       )}
-
       <div className="mx-3 gap-7 flex flex-col">
         <ProfileHeader />
         <div className="flex">

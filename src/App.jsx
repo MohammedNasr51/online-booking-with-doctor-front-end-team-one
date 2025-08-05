@@ -9,11 +9,14 @@ import FAQS from "./pages/profile/FAQS";
 import PaymentMethods from "./pages/profile/PaymentMethods";
 import PaymentCards from "./pages/profile/PaymentCards";
 import AddNewCard from "./pages/profile/AddNewCard";
+import Notifications from "./pages/Notifications/Notifications";
+import Favourites from "./pages/favourites/Favourites";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<Profile />} />
         <Route path="/profile">
           <Route index element={<Profile />} />
           <Route path="edit" element={<EditProfile />} />
@@ -30,6 +33,8 @@ function App() {
             <Route path="add-new-card" element={<AddNewCard />} />
           </Route>
         </Route>
+          <Route path="/favourites" element={<Favourites />} />
+        <Route path="/notifications" element={<Notifications />} />
       </Routes>
     </Router>
   );

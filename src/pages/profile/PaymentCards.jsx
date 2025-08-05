@@ -5,10 +5,10 @@ import criditcardImg from "../../assets/images/credit-card-image.svg";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 const cards = [
-  //   {
-  //     icon: visaIcon,
-  //     title: "Axis Bank 450***49",
-  //   },
+    {
+      icon: visaIcon,
+      title: "Axis Bank 450***49",
+    },
 ];
 
 export default function PaymentCards() {
