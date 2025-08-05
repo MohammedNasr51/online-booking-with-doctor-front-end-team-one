@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import { Route, Routes } from "react-router"
+import MyBooking from "./components/Booking/MyBooking"
+import BookAppoinment from "./components/Booking/BookAppoinment"
+import PayStripe from "./components/Booking/PayStripe"
+import DoctorDetailes from "./components/Booking/DoctorDetailes"
 import Profile from "./pages/profile/Profile";
 import "./App.css";
 import EditProfile from "./pages/profile/EditProfile";
@@ -14,9 +19,13 @@ import Favourites from "./pages/favourites/Favourites";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Profile />} />
+    <>
+    <Routes>
+      <Route path="/" element={<MyBooking />}/>
+      <Route path="/doctorDetailes" element={<DoctorDetailes />}/>
+      <Route path="/bookApp" element={<BookAppoinment />}/>
+      <Route path="/pay" element={<PayStripe />}/>
+      
         <Route path="/profile">
           <Route index element={<Profile />} />
           <Route path="edit" element={<EditProfile />} />
@@ -36,7 +45,7 @@ function App() {
           <Route path="/favourites" element={<Favourites />} />
         <Route path="/notifications" element={<Notifications />} />
       </Routes>
-    </Router>
+      </>
   );
 }
 
