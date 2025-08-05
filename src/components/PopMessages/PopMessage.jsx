@@ -11,7 +11,7 @@ export default function PopMessage({ shown, onClose }) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
-        className="bg-white p-6 rounded-xl shadow-lg max-w-sm w-full"
+        className="bg-white p-6 rounded-xl shadow-lg max-w-sm w-[90%]"
       >
         <div className="flex flex-col items-center text-center">
           <img src={warning} alt="warning" className="w-20 h-20 mb-4" />

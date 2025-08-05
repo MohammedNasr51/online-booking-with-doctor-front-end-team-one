@@ -92,7 +92,7 @@ export default function PayStripe() {
           </button>
         </div>
       </div>
-     <PayFooter title="Pay" nav="/" />
+     <PayFooter title="Pay" nav="/profile" />
     </div>
   );
 }

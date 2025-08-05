@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { generateCalendarDates } from "../../GetDate/GenerateDaysList";
+import { generateCalendarDates } from "../../data/GenerateDaysList";
 import Arrowlogo from "../../assets/icons/arrow.png";
 import leftarrow from "../../assets/icons/arrow-right.png";
 import calendarlogo from "../../assets/icons/calendar-02.png";
