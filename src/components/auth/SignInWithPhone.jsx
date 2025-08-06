@@ -1,11 +1,10 @@
 import React from "react";
 import { Link } from "react-router";
-import HeartImg from "../../assets/icons/BsHeartPulse.png";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
 import FacebookImg from "../../assets/icons/FacebookImg.png";
 import AppleImg from "../../assets/icons/AppleImg.png";
 import ArrowLeft from "../../assets/icons/ArrowLeft.png";
-import EmailIcon from "../../assets/icons/EmailIcon.png";
+import TelInput from "../profile/TelInput";
 
 function SignInWithPhone() {
   return (
@@ -27,44 +26,28 @@ function SignInWithPhone() {
           action=""
           className="flex flex-col mb-14 md:mb-0 md:gap-2 gap-[2.2rem] w-[374px] md:w-[420px]"
         >
-          <div className="relative">
-            <img
-              src={EmailIcon}
-              alt="email icon"
-              className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-4 opacity-80"
-            />
-            <input
-              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full"
-              type="number"
-              id="phone"
-              placeholder="Enter your number"
-            />
-          </div>
-
+          <TelInput />
           <div className="mb-7 md:hidden flex items-center justify-around">
             <label className="flex items-center" htmlFor="terms-mobile">
               <input
                 type="checkbox"
                 id="terms-mobile"
-                className="mr-2 w-[19px] h-[19px] border-[1.5px] border-[#99A2AB] rounded-md"
+                className="mr-2 w-[19px] h-[19px] border-[1.5px] border-[#99A2AB] rounded-xl"
               />
               Remember me
             </label>
           </div>
-
           <Link
             to="/auth/OtpPhone"
             className="bg-[#145DB8] py-3 px-3 text-center text-white rounded-md"
           >
             Sign in
           </Link>
-
           <div className="flex items-center gap-4 my-6">
             <hr className="flex-grow border-t border-gray-300" />
             <div className="text-[#99A2AB] text-[20px]">or</div>
             <hr className="flex-grow border-t border-gray-300" />
           </div>
-
           <ul className="flex items-center justify-center md:gap-4 mb-6">
             <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
               <img
@@ -84,7 +67,6 @@ function SignInWithPhone() {
               <img className="text-lg w-[20px]" src={AppleImg} alt="AppleImg" />
             </a>
           </ul>
-
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#99A2AB]">Already have an account!</p>
             <Link to="/auth/register" className="text-[#145DB8]">
