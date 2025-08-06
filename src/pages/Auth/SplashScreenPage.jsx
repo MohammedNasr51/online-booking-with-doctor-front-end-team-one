@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import BsHeartPulseWhite from "../assets/icons/BsHeartPulseWhite.png";
+import BsHeartPulseWhite from "../../assets/icons/BsHeartPulseWhite.png";
 function SplashScreen() {
   useEffect(() => {
     const timer = setTimeout(() => {
-      window.location.href = "/onboarding1";
+      window.location.href = "/auth/onboarding1";
     }, 3000);
     return () => clearTimeout(timer);
   }, []);

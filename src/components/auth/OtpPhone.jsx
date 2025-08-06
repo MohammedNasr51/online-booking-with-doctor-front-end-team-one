@@ -26,7 +26,7 @@ function OtpPhone() {
     <div className="relative flex flex-col h-screen items-center justify-start pt-40 md:justify-center">
       <div className="">
         <div className="flex items-center justify-center gap-20 text-lg font-[400] mb-4 d-block md:hidden absolute top-6 left-4">
-          <Link to="/SignInWithPhone">
+          <Link to="/auth/SignInWithPhone">
             <img className="" src={ArrowLeft} alt="Back" />
           </Link>
           <p>OTP Code Verification</p>

@@ -7,7 +7,7 @@ function ForgetPassword() {
     <div className="relative flex flex-col h-screen items-center justify-start pt-40 md:justify-center">
       <div className="">
         <div className="flex items-center justify-center gap-24 text-lg font-[400] mb-4 d-block md:hidden absolute top-6 left-4">
-          <Link to="/login">
+          <Link to="/auth/login">
             <img className="" src={ArrowLeft} alt="Back" />
           </Link>
           <p>Forget your password</p>
@@ -32,7 +32,7 @@ function ForgetPassword() {
           </div>
         </form>
         <Link
-          to="/CodeVerification"
+          to="/auth/CodeVerification"
           className="bg-[#145DB8] text-white rounded-md py-3 px-36 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2"
         >
           {" "}

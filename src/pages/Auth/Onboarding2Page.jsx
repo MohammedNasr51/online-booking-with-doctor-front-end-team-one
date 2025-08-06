@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router";
-import Onboarding2 from "../assets/images/Onboarding2.png";
+import Onboarding2 from "../../assets/images/Onboarding2.png";
 
 function Onboarding2Page() {
   return (
     <div className="relative flex flex-col items-center justify-around h-screen">
       <div>
         <Link
-          to="/register"
+          to="/auth/register"
           className="text-gray-500 text-lg absolute top-4 right-4"
         >
           Skip
@@ -38,7 +38,7 @@ function Onboarding2Page() {
       </div>
       <Link
         className="bg-[#145DB8] text-white text-lg text-center py-3 px-[150px] rounded"
-        to="/SignInWithSocial"
+        to="/auth/SignInWithSocial"
       >
         Get Started
       </Link>

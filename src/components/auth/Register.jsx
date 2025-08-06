@@ -15,7 +15,7 @@ function Register() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
       <div className="md:absolute left-[20%] z-10">
-        <Link to="/onboarding2">
+        <Link to="/auth/onboarding2">
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -128,7 +128,7 @@ function Register() {
           </div>
 
           <Link
-            to="/register"
+            to="/auth/register"
             className="bg-[#145DB8] py-3 px-3 text-center text-white rounded-md"
           >
             Create an account
@@ -154,7 +154,7 @@ function Register() {
 
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#99A2AB]">Already have an account!</p>
-            <Link to="/login" className="text-[#145DB8]">
+            <Link to="/auth/login" className="text-[#145DB8]">
               Sign in
             </Link>
           </div>

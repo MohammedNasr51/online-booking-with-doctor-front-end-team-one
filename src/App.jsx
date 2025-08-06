@@ -72,17 +72,17 @@ function App() {
         </Route>
 
         <Route path="/auth">
-          <Route path="/" element={<SplashScreen />} />
-          <Route path="/login" element={<SignInWithEmail />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/SignInWithSocial" element={<SignInWithSocial />} />
-          <Route path="/SignInWithPhone" element={<SignInWithPhone />} />
-          <Route path="/OtpPhone" element={<OtpPhone />} />
-          <Route path="/ForgetPassword" element={<ForgetPassword />} />
-          <Route path="/CodeVerification" element={<CodeVerification />} />
-          <Route path="/ChangePassword" element={<ChangePassword />} />
-          <Route path="/onboarding1" element={<Onboarding1Page />} />
-          <Route path="/onboarding2" element={<Onboarding2Page />} />
+          <Route index element={<SplashScreen />} />
+          <Route path="login" element={<SignInWithEmail />} />
+          <Route path="register" element={<Register />} />
+          <Route path="SignInWithSocial" element={<SignInWithSocial />} />
+          <Route path="SignInWithPhone" element={<SignInWithPhone />} />
+          <Route path="OtpPhone" element={<OtpPhone />} />
+          <Route path="ForgetPassword" element={<ForgetPassword />} />
+          <Route path="CodeVerification" element={<CodeVerification />} />
+          <Route path="ChangePassword" element={<ChangePassword />} />
+          <Route path="onboarding1" element={<Onboarding1Page />} />
+          <Route path="onboarding2" element={<Onboarding2Page />} />
         </Route>
       </Routes>
     </>

@@ -11,7 +11,7 @@ function SignInWithPhone() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
       <div className="">
-        <Link to="/SignInWithSocial">
+        <Link to="/auth/SignInWithSocial">
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -53,7 +53,7 @@ function SignInWithPhone() {
           </div>
 
           <Link
-            to="/OtpPhone"
+            to="/auth/OtpPhone"
             className="bg-[#145DB8] py-3 px-3 text-center text-white rounded-md"
           >
             Sign in
@@ -87,7 +87,7 @@ function SignInWithPhone() {
 
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#99A2AB]">Already have an account!</p>
-            <Link to="/register" className="text-[#145DB8]">
+            <Link to="/auth/register" className="text-[#145DB8]">
               Sign up
             </Link>
           </div>

@@ -5,11 +5,9 @@ import './index.css'
 import { BrowserRouter } from 'react-router'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
   <StrictMode>
     <BrowserRouter>
     <App />
     </BrowserRouter>
   </StrictMode>,
-  </BrowserRouter>
 )
