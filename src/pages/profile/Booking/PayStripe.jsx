@@ -4,12 +4,12 @@ import payLogo from "../../assets/icons/paypal.png";
 import appleLogo from "../../assets/icons/pay.png";
 import { Link } from "react-router";
 import { useState } from "react";
-import DoctorHeader from "./Common/DoctorHeader";
-import PayFooter from "./Common/PayFooter";
+import DoctorHeader from "../../../components/Booking/DoctorHeader";
+import PayFooter from "../../../components/Booking/PayFooter";
 export default function PayStripe() {
   const [selectedOption, setSelectedOption] = useState(false);
   return (
-    <div className="bg-white">
+    <div className="bg-white max-w-[600px] flex flex-col">
       {/* Header */}
       <DoctorHeader />
       <div className="mt-5 flex justify-between ml-4 mr-4">
@@ -89,10 +89,12 @@ export default function PayStripe() {
         <div className="w-full flex">
           <button className=" mt-8 w-[90%] font-medium py-3 m-auto text-blue-500 border-dashed border-blue-500 rounded-lg border-spacing-12 border-2">
             + Add new card
-          </button>
+          </button> 
         </div>
       </div>
+      <div className="w-full absolute bottom-0">
      <PayFooter title="Pay" nav="/profile" />
+      </div>
     </div>
   );
 }

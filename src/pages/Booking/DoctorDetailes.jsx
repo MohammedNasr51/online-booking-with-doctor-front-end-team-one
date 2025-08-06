@@ -7,13 +7,13 @@ import stars from "../../assets/icons/stars.png";
 import penIcon from "../../assets/icons/pen.png";
 import patient from "../../assets/images/nabila.png";
 import { useState } from "react";
-import DoctorHeader from "./Common/DoctorHeader";
-import PayFooter from "./Common/PayFooter";
+import DoctorHeader from "../../../components/Booking/Common/DoctorHeader";
+import PayFooter from "../../../components/Booking/Common/PayFooter";
 
 export default function DoctorDetailes() {
   const [expanded, setExpanded] = useState(false);
   return (
-    <div className="bg-white min-h-[130vh]">
+    <div className="bg-white min-h-screen">
       {/* header */}
       <DoctorHeader />
       {/* body */}
@@ -66,7 +66,7 @@ export default function DoctorDetailes() {
         </p>
       </div>
       {/* Reviews */}
-      <div className="ml-4 mt-2 p-2 mr-4">
+      <div className="ml-4 mt-2 p-2 mr-4 mb-4">
         <div className="flex justify-between">
             <h3 className="font-medium text-[18px]">Reviews and Rating</h3>
             <div className="flex items-center mr-2 gap-1">

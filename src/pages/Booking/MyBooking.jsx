@@ -1,8 +1,8 @@
 import { generateDatesToEndOfYear } from "../../data/Date";
 import { useRef, useState } from "react";
-import BookCard from "./BookCard";
-import PopMessage from "../PopMessages/PopMessage";
-import Footer from "../Footer/Footer";
+import BookCard from "../../components/Booking/BookCard";
+import PopMessage from "../../components/PopMessages/PopMessage";
+import Footer from "../../components/Footer/Footer";
 
 export default function MyBooking() {
   const scrollRef = useRef(null);

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { generateCalendarDates } from "../../data/GenerateDaysList";
+import { generateCalendarDates } from "../../../data/GenerateDaysList";
 import Arrowlogo from "../../assets/icons/arrow.png";
 import leftarrow from "../../assets/icons/arrow-right.png";
 import calendarlogo from "../../assets/icons/calendar-02.png";
-import DoctorHeader from "./Common/DoctorHeader";
-import PayFooter from "./Common/PayFooter";
+import DoctorHeader from "../../../components/Booking/Common/DoctorHeader";
+import PayFooter from "../../../components/Booking/Common/PayFooter";
 
 export default function BookAppoinment() {
   const [show, setShow] = useState(false);
@@ -36,8 +36,7 @@ export default function BookAppoinment() {
 
   return (
     <div
-      className="bg-white min-h-screen"
-      style={{ minHeight: show && "160vh" }}>
+      className="bg-white h-screen">
       <DoctorHeader />
       <div className="mt-8 px-4">
         <h2 className="text-lg font-medium">Select a day</h2>
@@ -111,7 +110,9 @@ export default function BookAppoinment() {
           ))}
         </div>
       </div>
+      <div className="absolute bottom-0 w-full">
       <PayFooter title="Continue to pay" nav="/pay" />
+      </div>
     </div>
   );
 }
