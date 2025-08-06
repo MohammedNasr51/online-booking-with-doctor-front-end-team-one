@@ -3,7 +3,7 @@ import calenderIcon from "../../assets/icons/calendar-02.png";
 import locationIcon from "../../assets/icons/Icon.png";
 import doctorIcon from "../../assets/images/644acebb39b684127cacceef34d2234b0b1622c9.jpg";
 import PopMessage from "../PopMessages/PopMessage";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 export default function BookCard() {
   const [show, setShow] = useState(false);
