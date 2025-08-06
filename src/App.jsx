@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router";
-import MyBooking from "./components/Booking/MyBooking";
-import BookAppoinment from "./components/Booking/BookAppoinment";
-import PayStripe from "./components/Booking/PayStripe";
-import DoctorDetailes from "./components/Booking/DoctorDetailes";
+import MyBooking from "./pages/Booking/MyBooking";
+import BookAppoinment from "./pages/Booking/BookAppoinment";
+import PayStripe from "./pages/Booking/PayStripe";
+import DoctorDetailes from "./pages/Booking/DoctorDetailes";
 import Profile from "./pages/profile/Profile";
 import "./App.css";
 import EditProfile from "./pages/profile/EditProfile";
@@ -17,15 +17,35 @@ import Notifications from "./pages/Notifications/Notifications";
 import Favourites from "./pages/favourites/Favourites";
 import Reviews from "./components/Reviews/Reviews";
 import AddReview from "./components/Reviews/AddReview";
+import DoctorFullPage from "./pages/Booking/DoctorFullPage";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <Routes>
-        <Route path="/" element={<MyBooking />} />
-        <Route path="/doctorDetailes" element={<DoctorDetailes />} />
-        <Route path="/bookApp" element={<BookAppoinment />} />
-        <Route path="/pay" element={<PayStripe />} />
+        <Route path="/myBooking" element={<MyBooking />} />
+        {isMobile ? (
+          <>
+            <Route path="/doctorDetailes" element={<DoctorDetailes />} />
+            <Route path="/bookApp" element={<BookAppoinment />} />
+            <Route path="/pay" element={<PayStripe />} />
+          </>
+        ) : (
+          <Route path="/doctorFull" element={<DoctorFullPage />} />
+        )}
 
         <Route path="/profile">
           <Route index element={<Profile />} />
