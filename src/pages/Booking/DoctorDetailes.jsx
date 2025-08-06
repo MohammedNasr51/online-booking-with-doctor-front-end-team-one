@@ -7,8 +7,9 @@ import stars from "../../assets/icons/stars.png";
 import penIcon from "../../assets/icons/pen.png";
 import patient from "../../assets/images/nabila.png";
 import { useState } from "react";
-import DoctorHeader from "../../../components/Booking/Common/DoctorHeader";
-import PayFooter from "../../../components/Booking/Common/PayFooter";
+import DoctorHeader from "../../components/Booking/DoctorHeader";
+import PayFooter from "../../components/Booking/PayFooter";
+import { Link } from "react-router-dom";
 
 export default function DoctorDetailes() {
   const [expanded, setExpanded] = useState(false);
@@ -71,7 +72,9 @@ export default function DoctorDetailes() {
             <h3 className="font-medium text-[18px]">Reviews and Rating</h3>
             <div className="flex items-center mr-2 gap-1">
                 <img src={penIcon} alt="EDit Icon" className="w-4 h-4" />
+                <Link to="/add-review">
                 <button className="text-sm text-blue-700">add review</button>
+                </Link>
             </div>
         </div>
         <div className="flex justify-between mt-5 items-center">

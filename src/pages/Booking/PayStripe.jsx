@@ -4,8 +4,9 @@ import payLogo from "../../assets/icons/paypal.png";
 import appleLogo from "../../assets/icons/pay.png";
 import { Link } from "react-router";
 import { useState } from "react";
-import DoctorHeader from "../../components/Booking/Common/DoctorHeader";
-import PayFooter from "../../components/Booking/Common/PayFooter";
+import DoctorHeader from "../../components/Booking/DoctorHeader";
+import PayFooter from "../../components/Booking/PayFooter";
+
 export default function PayStripe() {
   const [selectedOption, setSelectedOption] = useState(false);
   return (

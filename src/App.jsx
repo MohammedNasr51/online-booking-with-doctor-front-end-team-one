@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router";
-import MyBooking from "./pages/profile/Booking/MyBooking";
-import BookAppoinment from "./pages/profile/Booking/BookAppoinment";
-import PayStripe from "./pages/profile/Booking/PayStripe";
-import DoctorDetailes from "./pages/profile/Booking/DoctorDetailes";
+import MyBooking from "./pages/Booking/MyBooking";
+import BookAppoinment from "./pages/Booking/BookAppoinment";
+import PayStripe from "./pages/Booking/PayStripe";
+import DoctorDetailes from "./pages/Booking/DoctorDetailes";
 import Profile from "./pages/profile/Profile";
 import "./App.css";
 import EditProfile from "./pages/profile/EditProfile";
@@ -13,7 +13,7 @@ import FAQS from "./pages/profile/FAQS";
 import PaymentMethods from "./pages/profile/PaymentMethods";
 import PaymentCards from "./pages/profile/PaymentCards";
 import AddNewCard from "./pages/profile/AddNewCard";
-import DoctorFullPage from "./pages/profile/Booking/DoctorFullPage";
+import DoctorFullPage from "./pages/Booking/DoctorFullPage";
 import { useEffect, useState } from "react";
 
 function App() {

@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { generateCalendarDates } from "../../../data/GenerateDaysList";
+import {generateCalendarDates} from "../../data/GenerateDaysList";
 import Arrowlogo from "../../assets/icons/arrow.png";
 import leftarrow from "../../assets/icons/arrow-right.png";
 import calendarlogo from "../../assets/icons/calendar-02.png";
-import DoctorHeader from "../../../components/Booking/Common/DoctorHeader";
-import PayFooter from "../../../components/Booking/Common/PayFooter";
+import DoctorHeader from "../../components/Booking/DoctorHeader";
+import PayFooter from "../../components/Booking/PayFooter";
 
 export default function BookAppoinment() {
   const [show, setShow] = useState(false);

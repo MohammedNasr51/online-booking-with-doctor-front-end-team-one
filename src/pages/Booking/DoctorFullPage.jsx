@@ -12,9 +12,10 @@ import medalIcon from "../../assets/icons/medal.svg";
 import doctorlogo from "../../assets/images/doctor.png";
 import starIcon from "../../assets/icons/star.png";
 import map from "../../assets/images/fullMap.png";
-import Footer from "../../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 import PayStripe from "./PayStripe";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function DoctorFullPage() {
   const [expanded, setExpanded] = useState(false);
@@ -150,7 +151,9 @@ export default function DoctorFullPage() {
                 <h3 className="font-medium text-[18px]">Reviews and Rating</h3>
                 <div className="flex items-center mr-2 gap-1">
                   <img src={penIcon} alt="EDit Icon" className="w-4 h-4" />
+                  <Link to="/add-review">
                   <button className="text-sm text-blue-700">add review</button>
+                  </Link>
                 </div>
               </div>
               <div className="flex justify-between mt-8 items-center">

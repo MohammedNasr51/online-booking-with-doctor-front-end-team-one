@@ -3,7 +3,6 @@ import calenderIcon from "../../assets/icons/calendar-02.png";
 import locationIcon from "../../assets/icons/Icon.png";
 import doctorIcon from "../../assets/images/644acebb39b684127cacceef34d2234b0b1622c9.jpg";
 import PopMessage from "../PopMessages/PopMessage";
-import { Link } from "react-router";
 
 export default function BookCard(){
     const [show , setShow] = useState(false);
@@ -35,10 +34,8 @@ export default function BookCard(){
                     <p className="text-sm text-gray-400 font-sans">129,ElNasr Street, Cairo, Egypt</p>
                 </div>
             <div className="flex items-center justify-around mt-3 mb-5">
-                <button className="border-gray-400 border-2 w-5/12 h-10 rounded-xl text-sm text-gray-500" onClick={handleCancel}>Cancel</button>
-                 <Link to="/doctorDetailes" className="border-none border-2 flex items-center justify-center rounded-xl w-5/12 h-10 text-sm text-gray-100 bg-blue-600">
+                <button className="border-gray-400 border-2  rounded-xl text-sm border-none flex items-center justify-center  w-5/12 h-10  text-gray-100 bg-blue-600" onClick={handleCancel}>Cancel</button>
                  Reshedule
-                 </Link>
             </div>    
         </div>
         {show && <PopMessage shown={show} onClose={()=>setShow(false)} />}
