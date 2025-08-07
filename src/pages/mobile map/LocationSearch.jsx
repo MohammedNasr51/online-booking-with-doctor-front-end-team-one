@@ -14,7 +14,7 @@ const LocationSearch = () => {
     <>
       <div className="flex justify-around items-center mt-8 gap-2 ">
         <Link
-          to="/"
+          to="/home"
           className="relative  w-[40px] h-[40px] text-center rounded-[22px] shadow-lg"
         >
           <img
