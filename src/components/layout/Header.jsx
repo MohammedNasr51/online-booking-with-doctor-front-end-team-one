@@ -1,16 +1,30 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
+// Import all images
+import logoIcon from "../../assets/icons/logo.svg";
+import magnifierIcon from "../../assets/icons/Magnifer.png";
+import vectorIcon from "../../assets/icons/Vector.png";
+import closeListIcon from "../../assets/icons/close-list.svg";
+import bellIcon from "../../assets/icons/Bell.png";
+import profileImage from "../../assets/images/Ellipse 1538.png";
+import homeActiveIcon from "../../assets/icons/home.svg";
+import homeInactiveIcon from "../../assets/icons/home-inactive-icon.svg";
+import bookingActiveIcon from "../../assets/icons/booking-nav-icon.svg";
+import bookingInactiveIcon from "../../assets/icons/booking.svg";
+import profileActiveIcon from "../../assets/icons/profile-nav-icon.svg";
+import profileInactiveIcon from "../../assets/icons/Profile (1).svg";
+
 const Header = () => {
   const [close, setClose] = useState(false);
   return (
     <>
       <div className="hidden md:flex justify-evenly items-center p-2   lg:mx-[100px] mt-[52px] ">
         <Link to="/home">
-          <img src="src\assets\icons\logo.svg" alt="logo" />
+          <img src={logoIcon} alt="logo" />
         </Link>
         <div className="flex items-center bg-[#F5F6F7] w-[50%] h-[40px] rounded-[10px] px-[16px] py-[8px] gap-4">
-          <img src="src\assets\icons\Magnifer.png" alt="search icon" />
+          <img src={magnifierIcon} alt="search icon" />
           <Link to="/doctors" className="w-full">
             <input
               className="bg-transparent outline-none text-gray-600 w-full"
@@ -37,14 +51,14 @@ const Header = () => {
           {!close ? (
             <img
               className="cursor-pointer"
-              src="src\assets\icons\Vector.png"
+              src={vectorIcon}
               alt="list icon"
               onClick={() => setClose(!close)}
             />
           ) : (
             <img
               className="cursor-pointer"
-              src="src\assets\icons\close-list.svg"
+              src={closeListIcon}
               alt="list icon"
               onClick={() => setClose(!close)}
             />
@@ -52,14 +66,14 @@ const Header = () => {
           <Link to="/home/notifications">
             <img
               className="cursor-pointer"
-              src="src\assets\icons\Bell.png"
+              src={bellIcon}
               alt="notification icon"
             />
           </Link>
           <Link to="/profile">
             <img
               className="ml-2 cursor-pointer"
-              src="src\assets\images\Ellipse 1538.png"
+              src={profileImage}
               alt="profile icon"
             />
           </Link>
@@ -71,11 +85,7 @@ const Header = () => {
           {({ isActive }) => (
             <>
               <img
-                src={
-                  isActive
-                    ? "src/assets/icons/home.svg"
-                    : "src/assets/icons/home-inactive-icon.svg"
-                }
+                src={isActive ? homeActiveIcon : homeInactiveIcon}
                 alt="Home icon"
               />
               <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
@@ -90,11 +100,7 @@ const Header = () => {
           {({ isActive }) => (
             <>
               <img
-                src={
-                  isActive
-                    ? "src/assets/icons/booking-nav-icon.svg"
-                    : "src/assets/icons/booking.svg"
-                }
+                src={isActive ? bookingActiveIcon : bookingInactiveIcon}
                 alt="Booking icon"
               />
               <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
@@ -109,11 +115,7 @@ const Header = () => {
           {({ isActive }) => (
             <>
               <img
-                src={
-                  isActive
-                    ? "src/assets/icons/profile-nav-icon.svg"
-                    : "src/assets/icons/Profile (1).svg"
-                }
+                src={isActive ? profileActiveIcon : profileInactiveIcon}
                 alt="Profile icon"
               />
               <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>

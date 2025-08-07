@@ -46,7 +46,7 @@ const Index = () => {
     <>
       <div className="hidden md:flex flex-col justify-center items-center p-4  m-auto mt-12 gap-[24px] w-[50%]">
         <div className="bg-[#E8EFF8] text-[13px] flex justify-between items-center gap-[8px]  px-3 py-1 rounded-[28px]">
-          <img src={starVectorIcon} alt="star" />
+          <img src="src\assets\icons\Vector (1).png" alt="star" />
           <p>Upgrade your account</p>
         </div>
         <h1 className="text-[#05162c] font-400 text-[20px] lg:text-[40px]">
@@ -59,7 +59,7 @@ const Index = () => {
           secure.
         </p>
         <div className="bg-[#E8EFF8] text-[13px] flex justify-between items-center gap-[8px]  px-3 py-1 rounded-[28px]">
-          <img src={frameImage} alt="star" />
+          <img src="src\assets\images\Frame 1000001198.png" alt="star" />
           <p>10k+ happy patients </p>
         </div>
         <div className="flex justify-between flex-col lg:flex-row items-center gap-[32px] text-[14px]">
@@ -68,7 +68,7 @@ const Index = () => {
           </button>
           <Link to="/doctorFull">
             <div className="flex justify-center items-center gap-[8px]  border border-[#145DB8] rounded-[10px] px-[4px] lg:px-[16px] py-[8px]">
-              <img src={calendarIcon} alt="calender" />
+              <img src="src\assets\icons\calendar-02.png" alt="calender" />
               <p className="text-[#145DB8] ">Book Appointment</p>
             </div>
           </Link>
@@ -108,14 +108,18 @@ const Index = () => {
               trusted doctors and clinics around you—quick, easy, and local.
             </p>
             <div className="flex justify-center items-center gap-[8px] w-fit-content lg:w-[200px]  border border-[#145DB8] rounded-[10px] m-4 py-[8px]">
-              <img src={vectorIcon} alt="calender" />
+              <img src="src\assets\icons\Vector.svg" alt="calender" />
               <Link to="/doctors">
                 <p className="text-[#145DB8] ">Search by location</p>
               </Link>
             </div>
           </div>
 
-          <img src={mapImage} alt="map" className=" w-[80%] lg:w-[30%]" />
+          <img
+            src="src\assets\images\Frame 1000001255.svg"
+            alt="map"
+            className=" w-[80%] lg:w-[30%]"
+          />
         </div>
         <div className="w-[190%] flex justify-between flex-col lg:flex-row items-center gap-[32px] ">
           <div className="w-[70%]">
@@ -153,11 +157,14 @@ const Index = () => {
                     </p>
                     <div className="flex justify-between items-center gap-[10px] my-2">
                       <div className="flex items-center gap-2">
-                        <img src={starIcon} alt="rating" />
+                        <img src="src\assets\icons\Star.svg" alt="rating" />
                         <span>{doctor.rating}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <img src={clockIcon} alt="rating" />
+                        <img
+                          src="src\assets\icons\Clock Circle.svg"
+                          alt="rating"
+                        />
                         <span>{doctor.date}</span>
                       </div>
                     </div>
@@ -179,7 +186,6 @@ const Index = () => {
           </div>
         </div>
       </div>
-
       <div className="hidden lg:flex flex-col justify-center items-center mb-12">
         <Reviews />
         <div className="bg-[#E8EFF8] text-[#145DB8] text-[13px] flex justify-between items-center gap-[8px]  px-3 py-1 rounded-[28px]">
