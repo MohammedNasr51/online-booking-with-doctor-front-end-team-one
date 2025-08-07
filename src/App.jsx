@@ -43,6 +43,7 @@ import ForgetPassword from "./components/auth/ForgetPassword";
 import CodeVerification from "./components/auth/CodeVerification";
 import ChangePassword from "./components/auth/ChangePassword";
 import { useEffect, useState } from "react";
+import Notfound from "./pages/Notfound/Notfound";
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
@@ -118,6 +119,7 @@ function App() {
       <Route path="/notifications" element={<Notifications />} />
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/add-review" element={<AddReview />} />
+      <Route path="*" element={<Notfound />} />
     </Routes>
   );
 }
