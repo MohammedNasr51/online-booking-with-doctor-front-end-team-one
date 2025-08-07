@@ -4,6 +4,7 @@ import ProfileHeader from "../../components/profile/ProfileHeader";
 import Modal from "../../components/shared/Modal";
 import ModalContent from "../../components/shared/ModalContent";
 import { Link } from "react-router-dom";
+import Header from "../../components/layout/Header";
 
 export default function Profile() {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
@@ -39,9 +40,10 @@ export default function Profile() {
           />
         </Modal>
       )}
+      <Header />
       <div className="mx-3 gap-7 flex flex-col">
         <ProfileHeader />
-        <div className="flex">
+        <div className="flex h-[calc(100dvh-205px)] md:h-auto overflow-y-auto">
           <MenuSection onLogout={handleShowLogout} />
         </div>
       </div>
