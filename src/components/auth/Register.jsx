@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import HeartImg from "../../assets/icons/BsHeartPulse.png";
 import GoogleImg from "../../assets/icons/GoogleImg.png";

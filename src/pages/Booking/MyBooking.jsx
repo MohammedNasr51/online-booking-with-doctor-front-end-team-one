@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import BookCard from "../../components/Booking/BookCard";
 import PopMessage from "../../components/PopMessages/PopMessage";
 import Footer from "../../components/Footer/Footer";
+import Header from "../../components/layout/Header";
 
 export default function MyBooking() {
   const scrollRef = useRef(null);
@@ -69,6 +70,7 @@ export default function MyBooking() {
 
   return (
     <div className="h-auto bg-white">
+      <Header />
       <h2 className="ml-3 mt-3 font-medium text-lg md:hidden">My Booking</h2>
       <div
         ref={scrollRef}
