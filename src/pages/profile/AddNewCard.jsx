@@ -46,7 +46,7 @@ export default function AddNewCard() {
   return (
     <div className="mx-3 my-5">
       <CommonSettingsHeader title="Add New Card" />
-      <div>
+      <div className="h-[calc(100dvh-100px)]">
         <div className="flex flex-col items-center mb-6">
           <img src={addNewCardImg} alt="Add New Card" className="mb-6" />
 
@@ -149,7 +149,7 @@ export default function AddNewCard() {
             {/* Submit Button */}
             <Link
               to={'/profile/payment/method'}
-              className="block text-center w-full bg-[#145DB8] text-white py-2 rounded-lg hover:bg-[#0f4a7c] transition-colors"
+              className="block text-center w-full bg-[#145DB8] text-white py-2 my-3 rounded-lg hover:bg-[#0f4a7c] transition-colors"
             >
               Save
             </Link>

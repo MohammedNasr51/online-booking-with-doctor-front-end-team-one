@@ -97,6 +97,7 @@ function App() {
           <Route path="method" element={<PaymentCards />} />
           <Route path="add-new-card" element={<AddNewCard />} />
         </Route>
+        <Route path="favourites" element={<Favourites />} />
       </Route>
 
       <Route path="/auth">

@@ -15,7 +15,7 @@ const PROFILE_MENU_ITEMS = [
 
   {
     id: 3,
-    path: "/favourites",
+    path: "/profile/favourites",
     icon: favouriteIcon,
     title: "Favourites",
   },

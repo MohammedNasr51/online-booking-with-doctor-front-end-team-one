@@ -39,12 +39,6 @@ export default function Profile() {
           />
         </Modal>
       )}
-      <Link to={'/notifications'} >
-        notifications
-      </Link>
-      <Link to={'/reviews'} >
-        reviews
-      </Link>
       <div className="mx-3 gap-7 flex flex-col">
         <ProfileHeader />
         <div className="flex">
