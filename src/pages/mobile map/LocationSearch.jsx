@@ -2,6 +2,14 @@ import { Link } from "react-router-dom";
 import Specialties from "../doctor/Specialties";
 import MobileDoctorList from "../mobile home/MobileDoctorList";
 
+// Import images
+import arrowLeftIcon from "../../assets/icons/arrow left.svg";
+import profileImage from "../../assets/images/Ellipse 1538.png";
+import magnifierIcon from "../../assets/icons/Magnifer.png";
+import sortIcon from "../../assets/icons/Sort Vertical.svg";
+import tuningIcon from "../../assets/icons/Tuning 2.svg";
+import routingIcon from "../../assets/icons/Routing 2.svg";
+
 const LocationSearch = () => {
   return (
     <>
@@ -11,7 +19,7 @@ const LocationSearch = () => {
           className="relative  w-[40px] h-[40px] text-center rounded-[22px] shadow-lg"
         >
           <img
-            src="src\assets\icons\arrow left.svg"
+            src={arrowLeftIcon}
             alt="arrow left"
             className="absolute top-3 left-[15px]"
           />
@@ -22,10 +30,10 @@ const LocationSearch = () => {
             129,El-Nasr Street, Cairo
           </p>
         </div>
-        <img src="src\assets\images\Ellipse 1538.png" alt="profile" />
+        <img src={profileImage} alt="profile" />
       </div>
-   <div className="flex  items-center bg-[#F5F6F7] w-[90%] h-[40px] rounded-[10px] px-[16px] py-[8px] gap-4 my-6 ml-[5%] ">
-        <img src="src\assets\icons\Magnifer.png" alt="search icon" className="w-[20px]" />
+      <div className="flex  items-center bg-[#F5F6F7] w-[90%] h-[40px] rounded-[10px] px-[16px] py-[8px] gap-4 my-6 ml-[5%] ">
+        <img src={magnifierIcon} alt="search icon" className="w-[20px]" />
         <Link to="/search" className="w-full">
           <input
             className="bg-transparent outline-none text-gray-600 w-full text-[13px]"
@@ -39,25 +47,25 @@ const LocationSearch = () => {
           to="/current-location"
           className="flex justify-evenly items-center p-2 w-[200px] border border-2 border-[#BBC1C7] rounded-[10px] "
         >
-          <img src="src\assets\icons\Sort Vertical.svg" alt="sort" />
+          <img src={sortIcon} alt="sort" />
           <p className="text-[#6D7379] text-[13px]">sort</p>
         </Link>
         <Link
           to="/current-location"
           className="flex justify-evenly items-center p-2 w-[200px] border border-2 border-[#BBC1C7] rounded-[10px] "
         >
-          <img src="src\assets\icons\Tuning 2.svg" alt="filter" />
+          <img src={tuningIcon} alt="filter" />
           <p className="text-[#6D7379] text-[13px]">Filter</p>
         </Link>
         <Link
           to="/current-location"
           className="flex justify-evenly items-center p-2  w-[200px] border border-2 border-[#BBC1C7] rounded-[10px] "
         >
-          <img src="src\assets\icons\Routing 2.svg" alt="map" />
+          <img src={routingIcon} alt="map" />
           <p className="text-[#6D7379] text-[13px]">Map</p>
         </Link>
       </div>
-        <h1 className="text-[#1283CF] font-medium ml-[5%] mb-4">24 Reasults</h1>
+      <h1 className="text-[#1283CF] font-medium ml-[5%] mb-4">24 Reasults</h1>
       <MobileDoctorList />
     </>
   );

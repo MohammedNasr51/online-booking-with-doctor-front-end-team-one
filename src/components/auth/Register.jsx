@@ -129,7 +129,7 @@ function Register() {
           </div>
 
           <Link
-            to="/register"
+            to="/login"
             className="bg-[#145DB8] py-3 px-3 text-center text-white rounded-md"
           >
             Create an account

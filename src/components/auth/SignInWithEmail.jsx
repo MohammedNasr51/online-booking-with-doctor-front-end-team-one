@@ -1,4 +1,3 @@
-import React from "react";
 import HeartImg from "../../assets/icons/BsHeartPulse.png";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
 import FacebookImg from "../../assets/icons/FacebookImg.png";
@@ -79,9 +78,9 @@ function SignInWithEmail() {
             Forget the password?
           </Link>
 
-          <button className="bg-[#145DB8] py-3 px-3 text-white rounded-md">
+          <Link to="/home" className="text-center bg-[#145DB8] py-3 px-3 text-white rounded-md">
             Sign in
-          </button>
+          </Link>
           <div className="flex items-center gap-4 my-6">
             <hr className="flex-grow border-t border-gray-300" />
             <div className="text-[#99A2AB] text-[20px]">or</div>

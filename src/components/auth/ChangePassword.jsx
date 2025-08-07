@@ -45,10 +45,9 @@ function ChangePassword() {
             />
           </div>
         </form>
-        <Link
+        <Link to="/login"
           className="bg-[#145DB8] text-white rounded-md py-3 px-32 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2"
         >
-          {" "}
           Reset Password
         </Link>
       </div>
