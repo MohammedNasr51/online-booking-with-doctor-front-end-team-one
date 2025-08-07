@@ -1,5 +1,5 @@
 import phone from "../../assets/icons/phonefoot.png";
-import care from "../../assets/icons/heartplus.png";
+import care from "../../assets/icons/like.svg";
 import facebook from "../../assets/icons/face.png";
 import whats from "../../assets/icons/group.png";
 import linked from "../../assets/icons/linked.png";
