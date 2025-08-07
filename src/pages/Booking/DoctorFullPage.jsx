@@ -68,7 +68,9 @@ export default function DoctorFullPage() {
         {/* left side */}
         <div className="w-[75%] flex flex-col">
       <div className="ml-4 flex gap-3 items-center mb-8">
+        <Link to="/">
         <img src={arrowRight} alt="back" className="rotate-180 w-4 h-4" />
+        </Link>
         <h2 className="text-gray-700 ">Make an Appoinment</h2>
       </div>
           {/* top */}

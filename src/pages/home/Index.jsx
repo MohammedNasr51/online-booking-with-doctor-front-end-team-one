@@ -51,10 +51,12 @@ const Index = () => {
            Get started
           </Link>
         </button>
+        <Link to="/doctorFull">
         <div className="flex justify-center items-center gap-[8px]  border border-[#145DB8] rounded-[10px] px-[4px] lg:px-[16px] py-[8px]">
           <img src="src\assets\icons\calendar-02.png" alt="calender" />
           <p className="text-[#145DB8] ">Book Appointment</p>
         </div>
+        </Link>
       </div>
       <h1 className="text-[#05162c] font-400 text-[20px] lg:text-[40px] lg:m-12">How it works</h1>
       <div className="flex  justify-between flex-col gap-4 lg:flex-row items-center  lg:w-[200%]">
@@ -86,7 +88,9 @@ const Index = () => {
           </p>
           <div className="flex justify-center items-center gap-[8px] w-fit-content lg:w-[200px]  border border-[#145DB8] rounded-[10px] m-4 py-[8px]">
             <img src="src\assets\icons\Vector.svg" alt="calender" />
+            <Link to="/doctors">
             <p className="text-[#145DB8] ">Search by location</p>
+            </Link>
           </div>
         </div>
 
@@ -149,9 +153,11 @@ const Index = () => {
                 </p>
                 <p className="text-red-500 text-[18px]">{doctor.price}</p>
               </div>
+              <Link to="/doctorFull">
               <button className="bg-[#145DB8] text-[14px] w-full mt-2 text-white px-[16px] py-[10px] rounded-[10px]">
                 Book appointment
               </button>
+              </Link>
             </div>
           ))}
         </div>

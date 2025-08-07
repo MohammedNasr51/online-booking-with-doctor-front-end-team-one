@@ -6,6 +6,7 @@ import linked from "../../assets/icons/linked.png";
 import tube from "../../assets/icons/youtube.png";
 import location from "../../assets/icons/locfoot.png";
 import message from "../../assets/icons/footmess.png";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -45,8 +46,12 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="flex flex-col gap-2 text-gray-300">
-              <li>Home</li>
+             <Link to="/">
+             <li>Home</li>
+             </Link> 
+              <Link to="/doctors" >
               <li>Doctors</li>
+              </Link>
               <li>FAQs</li>
               <li>Contact Us</li>
             </ul>

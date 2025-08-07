@@ -1,6 +1,6 @@
 import "./App.css";
 import Layout from "./components/layout/Layout";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Index from "./pages/home/Index";
 import Doctors from "./pages/doctor/Doctors";
 import Map from "./pages/map/Map";
@@ -13,7 +13,6 @@ import LoadingLocation from "./pages/mobile map/LoadingLocation";
 import LocationSearch from "./pages/mobile map/LocationSearch";
 import CurrentLocation from "./pages/mobile map/CurrentLocation";
 
-// import { Route, Routes } from "react-router";
 import MyBooking from "./pages/Booking/MyBooking";
 import BookAppoinment from "./pages/Booking/BookAppoinment";
 import PayStripe from "./pages/Booking/PayStripe";

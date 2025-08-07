@@ -14,20 +14,28 @@ const MobileHome = () => {
           </p>
         </div>
         <div className="flex justify-center items-center gap-2">
-          <img
-            src="src\assets\icons\like.svg"
-            alt="like"
-            className="shadow-lg p-2 rounded-[11px]"
-          />
-          <img
-            src="src\assets\icons\Bell.png"
-            alt="notification"
-            className="shadow-lg p-2 rounded-[11px]"
-          />
+          <Link to="/">
+            <img
+              src="src\assets\icons\like.svg"
+              alt="like"
+              className="shadow-lg p-2 rounded-[11px]"
+            />
+          </Link>
+          <Link to="/">
+            <img
+              src="src\assets\icons\Bell.png"
+              alt="notification"
+              className="shadow-lg p-2 rounded-[11px]"
+            />
+          </Link>
         </div>
       </div>
       <div className="flex  items-center bg-[#F5F6F7] w-[90%] h-[40px] rounded-[10px] px-[16px] py-[8px] gap-4 mt-8 ml-[5%] ">
-        <img src="src\assets\icons\Magnifer.png" alt="search icon" className="w-[20px]" />
+        <img
+          src="src\assets\icons\Magnifer.png"
+          alt="search icon"
+          className="w-[20px]"
+        />
         <Link to="/search" className="w-full">
           <input
             className="bg-transparent outline-none text-gray-600 w-full text-[13px]"
@@ -56,8 +64,7 @@ const MobileHome = () => {
           View all
         </Link>
       </div>
-      <MobileDoctorList/>
-   
+      <MobileDoctorList />
     </div>
   );
 };

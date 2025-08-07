@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import { ListDoctor } from "../../data/data";
 
 const DoctorList=()=>{
@@ -33,9 +34,11 @@ const DoctorList=()=>{
               </p>
               <p className="text-red-500 text-[18px]">{doctor.price}</p>
             </div>
+            <Link to="/doctorFull">
             <button className="bg-[#145DB8] text-[14px] w-full mt-2 text-white px-[16px] py-[10px] rounded-[10px]">
               Book appointment
             </button>
+            </Link>
           </div>
         ))}
       </div>
