@@ -3,6 +3,7 @@ import MenuSection from "../../components/profile/MenuSection";
 import ProfileHeader from "../../components/profile/ProfileHeader";
 import Modal from "../../components/shared/Modal";
 import ModalContent from "../../components/shared/ModalContent";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
@@ -38,7 +39,12 @@ export default function Profile() {
           />
         </Modal>
       )}
-
+      <Link to={'/notifications'} >
+        notifications
+      </Link>
+      <Link to={'/reviews'} >
+        reviews
+      </Link>
       <div className="mx-3 gap-7 flex flex-col">
         <ProfileHeader />
         <div className="flex">

@@ -6,7 +6,7 @@ export default function Privacy() {
       <CommonSettingsHeader title={"Privacy Policy"} />
       <div>
         <div className="flex items-center">
-          <h1 className="">Last Updated:</h1>
+          <h1 className="mr-[3px]">Last Updated: </h1>
           <p className="text-sm text-[#6D7379]"> 19/11/2024</p>
         </div>
         <p className="text-sm text-[#6D7379] mt-2">

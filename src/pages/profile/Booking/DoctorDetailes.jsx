@@ -9,6 +9,7 @@ import patient from "../../assets/images/nabila.png";
 import { useState } from "react";
 import DoctorHeader from "../../../components/Booking/DoctorHeader";
 import PayFooter from "../../../components/Booking/PayFooter";
+import { Link } from "react-router-dom";
 
 export default function DoctorDetailes() {
   const [expanded, setExpanded] = useState(false);
@@ -60,7 +61,8 @@ export default function DoctorDetailes() {
           )}
           <button
             onClick={() => setExpanded(!expanded)}
-            className="text-blue-600 ml-1 focus:outline-none">
+            className="text-blue-600 ml-1 focus:outline-none"
+          >
             {expanded ? "Read less" : "Read more"}
           </button>
         </p>
@@ -68,39 +70,49 @@ export default function DoctorDetailes() {
       {/* Reviews */}
       <div className="ml-4 mt-2 p-2 mr-4 mb-4">
         <div className="flex justify-between">
-            <h3 className="font-medium text-[18px]">Reviews and Rating</h3>
-            <div className="flex items-center mr-2 gap-1">
-                <img src={penIcon} alt="EDit Icon" className="w-4 h-4" />
-                <button className="text-sm text-blue-700">add review</button>
-            </div>
+          <h3 className="font-medium text-[18px]">Reviews and Rating</h3>
+          <div className="flex items-center mr-2 gap-1">
+            <img src={penIcon} alt="EDit Icon" className="w-4 h-4" />
+            <Link to="/add-review">
+              <button className="text-sm text-blue-700">add review</button>
+            </Link>
+          </div>
         </div>
         <div className="flex justify-between mt-5 items-center">
-            <h2 className="text-4xl font-medium">4.5/5</h2>
-            <div className="flex flex-col items-center gap-1">
-                <img src={stars} alt="Rating" />
-                <p className="text-gray-400 font-medium">1250+ Reviews</p>
-            </div>
+          <h2 className="text-4xl font-medium">4.5/5</h2>
+          <div className="flex flex-col items-center gap-1">
+            <img src={stars} alt="Rating" />
+            <p className="text-gray-400 font-medium">1250+ Reviews</p>
+          </div>
         </div>
       </div>
       {/* reviewCard */}
       <div className="flex flex-col p-4 ml-4 mt-4 mr-4 border rounded-lg shadow border-gray-300">
         <div className="flex justify-between items-start">
-            <div className="flex gap-2 items-center">
-                <img src={patient} alt="patient Review" className="rounded-full bg-[#D7D7E4] w-16 h-14"/>
-                <div className="flex flex-col ml-1">
-                    <h3 className="font-medium">Nabila Reyna</h3>
-                    <p className="text-gray-500 text-sm">30 min ago</p>
-                </div>
+          <div className="flex gap-2 items-center">
+            <img
+              src={patient}
+              alt="patient Review"
+              className="rounded-full bg-[#D7D7E4] w-16 h-14"
+            />
+            <div className="flex flex-col ml-1">
+              <h3 className="font-medium">Nabila Reyna</h3>
+              <p className="text-gray-500 text-sm">30 min ago</p>
             </div>
-            <div className="flex items-center gap-1 p-2 bg-[#F9E0001A] rounded-lg mt-2">
-            <img src={yellowstarIcon} alt="icon" className="h-4 w-4"/>
+          </div>
+          <div className="flex items-center gap-1 p-2 bg-[#F9E0001A] rounded-lg mt-2">
+            <img src={yellowstarIcon} alt="icon" className="h-4 w-4" />
             <p className="text-yellow-500 font-medium">4.5</p>
-            </div>
+          </div>
         </div>
-        <p className="mt-3 text-gray-500 text-sm">Excellent service! Dr.Jessica Turner was attentive and through. The clinic was clean, and the staff were friendlly. Highly recommend for in-person care!</p>
+        <p className="mt-3 text-gray-500 text-sm">
+          Excellent service! Dr.Jessica Turner was attentive and through. The
+          clinic was clean, and the staff were friendlly. Highly recommend for
+          in-person care!
+        </p>
       </div>
       {/* footer */}
-      <PayFooter title="Book Appoinment" nav="/bookApp"/>
+      <PayFooter title="Book Appoinment" nav="/bookApp" />
     </div>
   );
 }

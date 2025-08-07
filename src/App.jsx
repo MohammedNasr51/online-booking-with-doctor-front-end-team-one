@@ -26,6 +26,10 @@ import FAQS from "./pages/profile/FAQS";
 import PaymentMethods from "./pages/profile/PaymentMethods";
 import PaymentCards from "./pages/profile/PaymentCards";
 import AddNewCard from "./pages/profile/AddNewCard";
+import Notifications from "./pages/Notifications/Notifications";
+import Favourites from "./pages/favourites/Favourites";
+import Reviews from "./components/Reviews/Reviews";
+import AddReview from "./components/Reviews/AddReview";
 import DoctorFullPage from "./pages/Booking/DoctorFullPage";
 import Register from "./components/auth/Register";
 import SignInWithEmail from "./components/auth/SignInWithEmail";
@@ -95,6 +99,7 @@ function App() {
           </Route>
         </Route>
 
+
         <Route path="/auth">
           <Route index element={<SplashScreen />} />
           <Route path="login" element={<SignInWithEmail />} />
@@ -108,6 +113,12 @@ function App() {
           <Route path="onboarding1" element={<Onboarding1Page />} />
           <Route path="onboarding2" element={<Onboarding2Page />} />
         </Route>
+
+        <Route path="/favourites" element={<Favourites />} />
+        <Route path="/notifications" element={<Notifications />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/add-review" element={<AddReview />} />
+
       </Routes>
 
     
