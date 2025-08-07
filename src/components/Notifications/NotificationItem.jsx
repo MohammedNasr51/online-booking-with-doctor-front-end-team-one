@@ -3,6 +3,7 @@ import appointmentCompletedIcon from "../../assets/icons/completed-appointment-i
 import appointmentCancelledIcon from "../../assets/icons/cancelled-appointment-icon.svg";
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 export default function NotificationItem({ title, message, time }) {
   let icon;
   let bgColor;
@@ -26,7 +27,7 @@ export default function NotificationItem({ title, message, time }) {
   }
 
   return (
-    <Link to="/doctorDetailes">
+    <Link to="/myBooking">
       <div
         className={`flex items-center py-4 w-[calc(100dvw-40px)] h-[86px] hover:bg-gray-50 transition-colors duration-200`}
       >

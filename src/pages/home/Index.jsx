@@ -3,6 +3,7 @@ import { topRatedDoctors } from "../../data/data";
 import MobileHome from "../mobile home/MobileHome";
 import Reviews from "../../components/Reviews/Reviews";
 import FAQSection from "../../components/profile/FAQSection";
+import MobileAdv from "../../components/layout/MobileAdv";
 const Index = () => {
   console.log(topRatedDoctors);
   const work = [
@@ -36,12 +37,12 @@ const Index = () => {
           <p>Upgrade your account</p>
         </div>
         <h1 className="text-[#05162c] font-400 text-[20px] lg:text-[40px]">
-          Find and book top doctors near yor
+          Find and book top doctors near you
         </h1>
         <p className="text-[#6D7379] text-[16px] lg:text-[26px] w-[100%] lg:w-[80%] text-center">
           Easily find top-rated specialists near you and book appointments in
           just a few clicks. Whether you need an in-person visit consultation,
-          we're here to connect you with the right care—fast, simple, and
+          we are here to connect you with the right care—fast, simple, and
           secure.
         </p>
         <div className="bg-[#E8EFF8] text-[13px] flex justify-between items-center gap-[8px]  px-3 py-1 rounded-[28px]">
@@ -185,6 +186,7 @@ const Index = () => {
         <FAQSection className="w-[70%]" />
       </div>
       <MobileHome />
+      <MobileAdv />
     </>
   );
 };
