@@ -1,7 +1,7 @@
 import "./App.css";
 import Layout from "./components/layout/Layout";
 import { Routes, Route } from "react-router-dom";
-import Index from "./pages/home/Index";
+import Index from "./pages/home/Home";
 import Doctors from "./pages/doctor/Doctors";
 import Map from "./pages/map/Map";
 import MobileSearch from "./pages/mobile search/MobileSearch";
@@ -58,7 +58,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index element={<Index />} />
+        <Route path="/home" element={<Index />} />
         <Route path="/doctors" element={<Doctors />} />
       </Route>
       <Route path="/map" element={<Map />} />
@@ -99,18 +99,23 @@ function App() {
         </Route>
       </Route>
 
-      <Route path="/auth">
-        <Route index element={<SplashScreen />} />
-        <Route path="login" element={<SignInWithEmail />} />
-        <Route path="register" element={<Register />} />
-        <Route path="SignInWithSocial" element={<SignInWithSocial />} />
-        <Route path="SignInWithPhone" element={<SignInWithPhone />} />
-        <Route path="OtpPhone" element={<OtpPhone />} />
-        <Route path="ForgetPassword" element={<ForgetPassword />} />
-        <Route path="CodeVerification" element={<CodeVerification />} />
-        <Route path="ChangePassword" element={<ChangePassword />} />
-        <Route path="onboarding1" element={<Onboarding1Page />} />
-        <Route path="onboarding2" element={<Onboarding2Page />} />
+      <Route path="/">
+        {
+          isMobile ? 
+          <Route index element={<SplashScreen />} />
+          :
+          <Route index element={<Register />} />
+        }
+        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={<SignInWithEmail />} />
+        <Route path="/SignInWithSocial" element={<SignInWithSocial />} />
+        <Route path="/SignInWithPhone" element={<SignInWithPhone />} />
+        <Route path="/OtpPhone" element={<OtpPhone />} />
+        <Route path="/ForgetPassword" element={<ForgetPassword />} />
+        <Route path="/CodeVerification" element={<CodeVerification />} />
+        <Route path="/ChangePassword" element={<ChangePassword />} />
+        <Route path="/onboarding1" element={<Onboarding1Page />} />
+        <Route path="/onboarding2" element={<Onboarding2Page />} />
       </Route>
 
       <Route path="/favourites" element={<Favourites />} />

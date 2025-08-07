@@ -8,9 +8,9 @@ const MobileDoctorList = () => {
         <Link to="/doctorDetailes">
           <div
             key={doctor.id}
-            className="flex w-[96%] ml-[2%] gap-1 justify-between pr-4 border border-[#BBC1C7] rounded-[15px]"
+            className="flex w-[96%] ml-[2%]  gap-1 justify-between pr-4 border border-[#BBC1C7] rounded-[15px]"
           >
-            <div className="flex ">
+            <div className="flex">
               <img src={doctor.image} alt={doctor.name} />
               <div className="flex flex-col gap-1 py-3 pl-2 pr-4 ">
                 <h1 className="font-medium text-[14px]">{doctor.name}</h1>

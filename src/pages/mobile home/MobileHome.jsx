@@ -64,7 +64,11 @@ const MobileHome = () => {
           View all
         </Link>
       </div>
+      <div>
+
       <MobileDoctorList />
+      </div>
+
     </div>
   );
 };

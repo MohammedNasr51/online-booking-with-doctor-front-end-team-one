@@ -7,7 +7,7 @@ function ChangePassword() {
     <div className="relative flex flex-col h-screen items-center justify-start pt-40 md:justify-center">
       <div className="px-3 md:px-0">
         <div className="flex items-center justify-center gap-24 text-lg font-[400] mb-4 d-block md:hidden absolute top-6 left-4">
-          <Link to="/auth/ForgetPassword">
+          <Link to="/ForgetPassword">
             <img className="" src={ArrowLeft} alt="Back" />
           </Link>
           <p>Set new password</p>

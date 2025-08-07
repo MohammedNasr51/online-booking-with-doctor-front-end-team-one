@@ -7,7 +7,7 @@ function Onboarding2Page() {
     <div className="relative flex flex-col items-center justify-around h-screen">
       <div>
         <Link
-          to="/auth/register"
+          to="/register"
           className="text-gray-500 text-lg absolute top-4 right-4"
         >
           Skip
@@ -38,7 +38,7 @@ function Onboarding2Page() {
       </div>
       <Link
         className="bg-[#145DB8] text-white text-lg text-center py-3 px-[150px] rounded"
-        to="/auth/SignInWithSocial"
+        to="/SignInWithSocial"
       >
         Get Started
       </Link>

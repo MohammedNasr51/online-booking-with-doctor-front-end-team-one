@@ -6,7 +6,7 @@ const AllDoctors = () => {
   return (
     <>
       <div className="flex   gap-2 items-center mt-8 w-[90%] px-8 ">
-        <Link to="/">
+        <Link to="/home">
           <img src="src\assets\icons\arrow left.svg" alt="arrow left" />
         </Link>
         <h1 className="font-medium ml-[40%] text-[18px]">Doctors</h1>

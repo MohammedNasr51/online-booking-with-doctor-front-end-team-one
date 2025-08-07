@@ -6,7 +6,7 @@ function Onboarding1Page() {
   return (
     <div className="relative flex flex-col items-center justify-around h-screen">
       <button>
-        <Link to="/auth/register" className="text-gray-500 text-lg absolute top-4 right-4">Skip</Link>
+        <Link to="/register" className="text-gray-500 text-lg absolute top-4 right-4">Skip</Link>
         <img src={Onboarding1} alt="Onboarding1" />
       </button>
       <div>
@@ -32,7 +32,7 @@ function Onboarding1Page() {
         </div>
       </div>
       <Link
-        to="/auth/onboarding2"
+        to="/onboarding2"
         className="bg-[#145DB8] text-white text-lg text-center py-3 px-[176px] rounded"
       >
         Next

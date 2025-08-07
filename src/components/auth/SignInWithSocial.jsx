@@ -9,7 +9,7 @@ function SignInWithSocial() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-center">
       <div className="">
-        <Link to="/auth/onboarding2">
+        <Link to="/onboarding2">
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -49,14 +49,14 @@ function SignInWithSocial() {
             <hr className="flex-grow border-t border-gray-300" />
           </div>
           <Link
-            to="/auth/SignInWithPhone"
+            to="/SignInWithPhone"
             className="bg-[#145DB8] text-white rounded-md py-3 px-16 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2"
           >
             Sign in with your Phone Number
           </Link>
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#99A2AB]">Already have an account!</p>
-            <Link to="/auth/register" className="text-[#145DB8]">
+            <Link to="/register" className="text-[#145DB8]">
               Sign up
             </Link>
           </div>

@@ -164,11 +164,10 @@ const Index = () => {
         </div>
       </div>
     </div>
-    <div className="hidden lg:flex"> 
-
+    <MobileHome/>
+    <div className="hidden lg:block"> 
     <Reviews />
     </div>
-    <MobileHome/>
 
     </>
   );

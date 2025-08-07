@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 import AvailableData from "./AvailableData";
 import DoctorList from "./DoctorList";
 import Specialties from "./Specialties";
+import MobileHome from "../mobile home/MobileHome";
 
 const Doctors = () => {
   return (
-    <div>
+    <>
+    <div className="hidden md:block">
       <div className="hidden lg:flex justify-evenly items-center px-16 pt-12">
         <div className="flex justify-between items-center px-4 w-[150px] border border-2 border-[#BBC1C7] rounded-[10px] ">
           <img src="src\assets\icons\Tuning 2.svg" alt="filter" />
@@ -42,6 +44,8 @@ const Doctors = () => {
             </button>
         </div>
     </div>
+    <MobileHome/>
+    </>
   );
 };
 export default Doctors;
