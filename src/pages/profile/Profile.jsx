@@ -3,12 +3,13 @@ import MenuSection from "../../components/profile/MenuSection";
 import ProfileHeader from "../../components/profile/ProfileHeader";
 import Modal from "../../components/shared/Modal";
 import ModalContent from "../../components/shared/ModalContent";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Header from "../../components/layout/Header";
 
 export default function Profile() {
   const [showLogoutModal, setShowLogoutModal] = useState(false);
   const logoutModalRef = useRef();
+  const navigate = useNavigate();
   useEffect(() => {
     if (showLogoutModal && logoutModalRef.current) {
       logoutModalRef.current.open();
@@ -25,7 +26,7 @@ export default function Profile() {
   const handleLogout = () => {
     setShowLogoutModal(false);
     // Add your logout logic here, e.g., clearing user data, redirecting to login page, etc.
-    console.log("User logged out");
+    navigate("/auth/login");
   };
   return (
     <>

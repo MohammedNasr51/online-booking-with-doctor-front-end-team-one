@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, Links } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [close, setClose] = useState(false);
@@ -66,24 +66,62 @@ const Header = () => {
         </div>
       </div>
       <div className="fixed bottom-0 left-0 w-full flex justify-evenly items-center bg-white shadow-lg z-50 md:hidden py-3 text-[12px]">
-        <div className="flex flex-col items-center">
-          <img src="src\assets\icons\home.svg" alt="header image" />
-          <Link to="/" className="text-[#145DB8]">
-            Home
-          </Link>
-        </div>
-        <div className="flex flex-col items-center">
-          <img src="src\assets\icons\booking.svg" alt="header image" />
-          <Link to="/bookApp" className="text-[#99A2AB]">
-            Booking
-          </Link>
-        </div>
-        <div className="flex flex-col items-center">
-          <img src="src\assets\icons\Profile (1).svg" alt="header image" />
-          <Link to="/profile" className="text-[#99A2AB]">
-            Profile
-          </Link>
-        </div>
+        {/* Home */}
+        <NavLink to="/" className="flex flex-col items-center">
+          {({ isActive }) => (
+            <>
+              <img
+                src={
+                  isActive
+                    ? "src/assets/icons/home.svg"
+                    : "src/assets/icons/home-inactive-icon.svg"
+                }
+                alt="Home icon"
+              />
+              <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
+                Home
+              </span>
+            </>
+          )}
+        </NavLink>
+
+        {/* Booking */}
+        <NavLink to="/bookApp" className="flex flex-col items-center">
+          {({ isActive }) => (
+            <>
+              <img
+                src={
+                  isActive
+                    ? "src/assets/icons/booking-nav-icon.svg"
+                    : "src/assets/icons/booking.svg"
+                }
+                alt="Booking icon"
+              />
+              <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
+                Booking
+              </span>
+            </>
+          )}
+        </NavLink>
+
+        {/* Profile */}
+        <NavLink to="/profile" className="flex flex-col items-center">
+          {({ isActive }) => (
+            <>
+              <img
+                src={
+                  isActive
+                    ? "src/assets/icons/profile-nav-icon.svg"
+                    : "src/assets/icons/Profile (1).svg"
+                }
+                alt="Profile icon"
+              />
+              <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
+                Profile
+              </span>
+            </>
+          )}
+        </NavLink>
       </div>
     </>
   );
