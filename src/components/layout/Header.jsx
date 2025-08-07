@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Link, Links } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const [close, setClose] = useState(false);
   return (
     <>
       <div className="hidden md:flex justify-evenly items-center p-2   lg:mx-[100px] mt-[52px] ">
-        <Link to="/">
+        <Link to="/home">
           <img src="src\assets\icons\logo.svg" alt="logo" />
         </Link>
         <div className="flex items-center bg-[#F5F6F7] w-[50%] h-[40px] rounded-[10px] px-[16px] py-[8px] gap-4">
@@ -22,7 +22,7 @@ const Header = () => {
         <div className="flex items-center gap-4 ">
           <div className={close ? "flex gap-4" : "hidden"}>
             <Link
-              to="/"
+              to="/home"
               className="w-[75%] rounded-[10px] py-[6px] px-[16px] bg-[#F5F6F7]"
             >
               Home
@@ -49,7 +49,7 @@ const Header = () => {
               onClick={() => setClose(!close)}
             />
           )}
-          <Link to="/notifications">
+          <Link to="/home/notifications">
             <img
               className="cursor-pointer"
               src="src\assets\icons\Bell.png"
@@ -66,24 +66,62 @@ const Header = () => {
         </div>
       </div>
       <div className="fixed bottom-0 left-0 w-full flex justify-evenly items-center bg-white shadow-lg z-50 md:hidden py-3 text-[12px]">
-        <div className="flex flex-col items-center">
-          <img src="src\assets\icons\home.svg" alt="header image" />
-          <Link to="/" className="text-[#145DB8]">
-            Home
-          </Link>
-        </div>
-        <div className="flex flex-col items-center">
-          <img src="src\assets\icons\booking.svg" alt="header image" />
-          <Link to="/bookApp" className="text-[#99A2AB]">
-            Booking
-          </Link>
-        </div>
-        <div className="flex flex-col items-center">
-          <img src="src\assets\icons\Profile (1).svg" alt="header image" />
-          <Link to="/profile" className="text-[#99A2AB]">
-            Profile
-          </Link>
-        </div>
+        {/* Home */}
+        <NavLink to="/home" className="flex flex-col items-center">
+          {({ isActive }) => (
+            <>
+              <img
+                src={
+                  isActive
+                    ? "src/assets/icons/home.svg"
+                    : "src/assets/icons/home-inactive-icon.svg"
+                }
+                alt="Home icon"
+              />
+              <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
+                Home
+              </span>
+            </>
+          )}
+        </NavLink>
+
+        {/* Booking */}
+        <NavLink to="/bookApp" className="flex flex-col items-center">
+          {({ isActive }) => (
+            <>
+              <img
+                src={
+                  isActive
+                    ? "src/assets/icons/booking-nav-icon.svg"
+                    : "src/assets/icons/booking.svg"
+                }
+                alt="Booking icon"
+              />
+              <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
+                Booking
+              </span>
+            </>
+          )}
+        </NavLink>
+
+        {/* Profile */}
+        <NavLink to="/profile" className="flex flex-col items-center">
+          {({ isActive }) => (
+            <>
+              <img
+                src={
+                  isActive
+                    ? "src/assets/icons/profile-nav-icon.svg"
+                    : "src/assets/icons/Profile (1).svg"
+                }
+                alt="Profile icon"
+              />
+              <span className={isActive ? "text-[#145DB8]" : "text-[#99A2AB]"}>
+                Profile
+              </span>
+            </>
+          )}
+        </NavLink>
       </div>
     </>
   );

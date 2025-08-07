@@ -39,7 +39,7 @@ export default function Settings() {
   };
   const handleDeleteAccount = () => {
     setShowModal(false);
-    navigate("/");
+    navigate("/register");
   };
   return (
     <>

@@ -7,7 +7,7 @@ const CurrentLocation = () => {
   return (
     <div className=" bg-[url(src/assets/images/currentmap.svg)] w-[100%] h-[100dvh] relative">
         <Link
-          to="/"
+          to="/home"
         >
           <img
             src="src\assets\icons\arrow left.svg"

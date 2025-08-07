@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import HeartImg from "../../assets/icons/BsHeartPulse.png";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
@@ -14,8 +13,10 @@ import LockIcon from "../../assets/icons/Key Square 3.png";
 function Register() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
+
       <div className="md:absolute left-[20%] z-10">
         <Link to="/onboarding2">
+
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -142,10 +143,18 @@ function Register() {
 
           <ul className="flex items-center justify-center md:gap-4 mb-6">
             <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
-              <img className="text-lg w-[20px]" src={FacebookImg} alt="FacebookImg" />
+              <img
+                className="text-lg w-[20px]"
+                src={FacebookImg}
+                alt="FacebookImg"
+              />
             </a>
             <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
-              <img className="text-lg w-[20px]" src={GoogleImg} alt="GoogleImg" />
+              <img
+                className="text-lg w-[20px]"
+                src={GoogleImg}
+                alt="GoogleImg"
+              />
             </a>
             <a className="border border-[#99A2AB] rounded-lg p-5">
               <img className="text-lg w-[20px]" src={AppleImg} alt="AppleImg" />
@@ -160,26 +169,15 @@ function Register() {
           </div>
         </form>
       </div>
-
       <img
         src={CurveRight}
         alt="Background Curve"
-        className="absolute opacity-100 h-screen hidden 2xl:block"
-        style={{
-          width: "1254px",
-          top: 0,
-          right: 0,
-        }}
+        className="absolute opacity-100 w-[930px] 2xl:w-[1254px] right-0 top-0  h-screen hidden xl:block"
       />
       <img
         src={LineCurve}
         alt="Background Curve"
-        className="absolute opacity-100 h-screen hidden 2xl:block"
-        style={{
-          width: "1254px",
-          top: 0,
-          right: "7px",
-        }}
+        className="absolute w-[930px] 2xl:w-[1254px] right-[7px] top-0 opacity-100 h-screen hidden xl:block"
       />
     </div>
   );

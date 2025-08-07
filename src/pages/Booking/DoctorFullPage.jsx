@@ -6,7 +6,7 @@ import yellowstarIcon from "../../assets/icons/yellowstar.png";
 import stars from "../../assets/icons/stars.png";
 import penIcon from "../../assets/icons/pen.png";
 import patient from "../../assets/images/nabila.png";
-import profileIcon from "../../assets/icons/profile1.svg";
+import profileIcon from "../../assets/icons/profileCard.svg";
 import meesageIcon from "../../assets/icons/messages.svg";
 import medalIcon from "../../assets/icons/medal.svg";
 import doctorlogo from "../../assets/images/doctor.png";

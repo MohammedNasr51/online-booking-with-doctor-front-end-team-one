@@ -43,6 +43,7 @@ import ForgetPassword from "./components/auth/ForgetPassword";
 import CodeVerification from "./components/auth/CodeVerification";
 import ChangePassword from "./components/auth/ChangePassword";
 import { useEffect, useState } from "react";
+import Notfound from "./pages/Notfound/Notfound";
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
 
@@ -97,15 +98,15 @@ function App() {
           <Route path="method" element={<PaymentCards />} />
           <Route path="add-new-card" element={<AddNewCard />} />
         </Route>
+        <Route path="favourites" element={<Favourites />} />
       </Route>
 
       <Route path="/">
-        {
-          isMobile ? 
+        {isMobile ? (
           <Route index element={<SplashScreen />} />
-          :
-          <Route index element={<Register />} />
-        }
+        ) : (
+          <Route index element={<SignInWithEmail />} />
+        )}
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<SignInWithEmail />} />
         <Route path="/SignInWithSocial" element={<SignInWithSocial />} />
@@ -118,10 +119,11 @@ function App() {
         <Route path="/onboarding2" element={<Onboarding2Page />} />
       </Route>
 
-      <Route path="/favourites" element={<Favourites />} />
-      <Route path="/notifications" element={<Notifications />} />
+      <Route path="/home/favourites" element={<Favourites />} />
+      <Route path="/home/notifications" element={<Notifications />} />
       <Route path="/reviews" element={<Reviews />} />
       <Route path="/add-review" element={<AddReview />} />
+      <Route path="*" element={<Notfound />} />
     </Routes>
   );
 }

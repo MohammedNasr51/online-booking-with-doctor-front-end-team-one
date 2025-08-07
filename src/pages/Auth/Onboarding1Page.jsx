@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { Link } from "react-router";
 import Onboarding1 from "../../assets/images/Hand_and_iPhone_16_Pro.png";
 

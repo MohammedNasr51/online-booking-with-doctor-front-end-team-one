@@ -18,7 +18,7 @@ export default function MenuItem({ item ,onClick }) {
           <img src={rightArrowIcon} alt="Right Arrow" />
         </Link>
       ) : (
-        <div onClick={onClick} className="flex items-center justify-between p-2 bg-gray-100 rounded-md">
+        <div onClick={onClick} className="flex items-center justify-between p-2 bg-gray-100 rounded-md cursor-pointer">
           <div className="flex items-center">
             <img src={item.icon} alt={item.title} className="mr-2" />
             <p className={item.title === "Logout" ? "text-red-500" : ""}>

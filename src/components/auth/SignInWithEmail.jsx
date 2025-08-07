@@ -12,8 +12,10 @@ import { Link } from "react-router";
 function SignInWithEmail() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
+
       <div className="md:absolute left-[20%] z-10">
         <Link to="/onboarding2">
+
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -70,7 +72,10 @@ function SignInWithEmail() {
               placeholder="Password"
             />
           </div>
+
           <Link to="/ForgetPassword" className="md:text-[#145DB8] text-[#99A2AB] md:mt-2 -mt-3 mb-7 -ml-2 text-md text-end">
+
+
             Forget the password?
           </Link>
 
@@ -104,22 +109,12 @@ function SignInWithEmail() {
       <img
         src={CurveRight}
         alt="Background Curve"
-        className="absolute opacity-100 h-screen hidden 2xl:block"
-        style={{
-          width: "1254px",
-          top: 0,
-          right: 0,
-        }}
+        className="absolute opacity-100 w-[930px] 2xl:w-[1254px] right-0 top-0  h-screen hidden xl:block"
       />
       <img
         src={LineCurve}
         alt="Background Curve"
-        className="absolute opacity-100 h-screen hidden 2xl:block"
-        style={{
-          width: "1254px",
-          top: 0,
-          right: "7px",
-        }}
+        className="absolute w-[930px] 2xl:w-[1254px] right-[7px] top-0 opacity-100 h-screen hidden xl:block"
       />
     </div>
   );
