@@ -3,7 +3,7 @@ import { ListDoctor } from "../../data/data";
 
 const MobileDoctorList = () => {
   return (
-    <div className="flex flex-col gap-4  mb-[15vh]">
+    <div className="flex flex-col gap-4  mb-[5vh]">
       {ListDoctor.map((doctor) => (
         <Link to="/doctorDetailes">
           <div

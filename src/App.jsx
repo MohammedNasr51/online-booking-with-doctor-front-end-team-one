@@ -56,72 +56,68 @@ function App() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   return (
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Index />} />
-          <Route path="/doctors" element={<Doctors />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Index />} />
+        <Route path="/doctors" element={<Doctors />} />
+      </Route>
+      <Route path="/map" element={<Map />} />
+      <Route path="/search" element={<MobileSearch />} />
+      <Route path="/specialties" element={<MobileSpecialties />} />
+      <Route path="/all-doctors" element={<AllDoctors />} />
+      <Route path="/maps" element={<MobileMap />} />
+      <Route path="/map-search" element={<MapSearch />} />
+      <Route path="/loading-location" element={<LoadingLocation />} />
+      <Route path="/location-search" element={<LocationSearch />} />
+      <Route path="/current-location" element={<CurrentLocation />} />
+
+      <Route path="/myBooking" element={<MyBooking />} />
+      {isMobile ? (
+        <>
+          <Route path="/doctorDetailes" element={<DoctorDetailes />} />
+          <Route path="/bookApp" element={<BookAppoinment />} />
+          <Route path="/pay" element={<PayStripe />} />
+        </>
+      ) : (
+        <Route path="/doctorFull" element={<DoctorFullPage />} />
+      )}
+
+      <Route path="/profile">
+        <Route index element={<Profile />} />
+        <Route path="edit" element={<EditProfile />} />
+        <Route path="settings" element={<Settings />} />
+        <Route
+          path="settings/password-management"
+          element={<PasswordManagement />}
+        />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="faq" element={<FAQS />} />
+        <Route path="payment">
+          <Route index element={<PaymentMethods />} />
+          <Route path="method" element={<PaymentCards />} />
+          <Route path="add-new-card" element={<AddNewCard />} />
         </Route>
-        <Route path="/map" element={<Map />} />
-        <Route path="/search" element={<MobileSearch />} />
-        <Route path="/specialties" element={<MobileSpecialties />} />
-        <Route path="/all-doctors" element={<AllDoctors />} />
-        <Route path="/maps" element={<MobileMap />} />
-        <Route path="/map-search" element={<MapSearch />} />
-        <Route path="/loading-location" element={<LoadingLocation />} />
-        <Route path="/location-search" element={<LocationSearch />} />
-        <Route path="/current-location" element={<CurrentLocation />} />
-       
-        <Route path="/myBooking" element={<MyBooking />} />
-        {isMobile ? (
-          <>
-            <Route path="/doctorDetailes" element={<DoctorDetailes />} />
-            <Route path="/bookApp" element={<BookAppoinment />} />
-            <Route path="/pay" element={<PayStripe />} />
-          </>
-        ) : (
-          <Route path="/doctorFull" element={<DoctorFullPage />} />
-        )}
+      </Route>
 
-        <Route path="/profile">
-          <Route index element={<Profile />} />
-          <Route path="edit" element={<EditProfile />} />
-          <Route path="settings" element={<Settings />} />
-          <Route
-            path="settings/password-management"
-            element={<PasswordManagement />}
-          />
-          <Route path="privacy" element={<Privacy />} />
-          <Route path="faq" element={<FAQS />} />
-          <Route path="payment">
-            <Route index element={<PaymentMethods />} />
-            <Route path="method" element={<PaymentCards />} />
-            <Route path="add-new-card" element={<AddNewCard />} />
-          </Route>
-        </Route>
+      <Route path="/auth">
+        <Route index element={<SplashScreen />} />
+        <Route path="login" element={<SignInWithEmail />} />
+        <Route path="register" element={<Register />} />
+        <Route path="SignInWithSocial" element={<SignInWithSocial />} />
+        <Route path="SignInWithPhone" element={<SignInWithPhone />} />
+        <Route path="OtpPhone" element={<OtpPhone />} />
+        <Route path="ForgetPassword" element={<ForgetPassword />} />
+        <Route path="CodeVerification" element={<CodeVerification />} />
+        <Route path="ChangePassword" element={<ChangePassword />} />
+        <Route path="onboarding1" element={<Onboarding1Page />} />
+        <Route path="onboarding2" element={<Onboarding2Page />} />
+      </Route>
 
-
-        <Route path="/auth">
-          <Route index element={<SplashScreen />} />
-          <Route path="login" element={<SignInWithEmail />} />
-          <Route path="register" element={<Register />} />
-          <Route path="SignInWithSocial" element={<SignInWithSocial />} />
-          <Route path="SignInWithPhone" element={<SignInWithPhone />} />
-          <Route path="OtpPhone" element={<OtpPhone />} />
-          <Route path="ForgetPassword" element={<ForgetPassword />} />
-          <Route path="CodeVerification" element={<CodeVerification />} />
-          <Route path="ChangePassword" element={<ChangePassword />} />
-          <Route path="onboarding1" element={<Onboarding1Page />} />
-          <Route path="onboarding2" element={<Onboarding2Page />} />
-        </Route>
-
-        <Route path="/favourites" element={<Favourites />} />
-        <Route path="/notifications" element={<Notifications />} />
-        <Route path="/reviews" element={<Reviews />} />
-        <Route path="/add-review" element={<AddReview />} />
-
-      </Routes>
-
-    
+      <Route path="/favourites" element={<Favourites />} />
+      <Route path="/notifications" element={<Notifications />} />
+      <Route path="/reviews" element={<Reviews />} />
+      <Route path="/add-review" element={<AddReview />} />
+    </Routes>
   );
 }
 

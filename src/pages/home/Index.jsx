@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { topRatedDoctors } from "../../data/data";
 import MobileHome from "../mobile home/MobileHome";
+import Reviews from "../../components/Reviews/Reviews";
 const Index = () => {
   console.log(topRatedDoctors);
   const work = [
@@ -163,7 +164,12 @@ const Index = () => {
         </div>
       </div>
     </div>
+    <div className="hidden lg:flex"> 
+
+    <Reviews />
+    </div>
     <MobileHome/>
+
     </>
   );
 };

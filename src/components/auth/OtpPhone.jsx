@@ -50,10 +50,12 @@ function OtpPhone() {
         <p className="text-[#99A2AB] text-center mb-20">
           Resend code in <span className="text-[#145DB8]">55</span> s
         </p>
-        <button className="bg-[#145DB8] text-white rounded-md py-3 px-36 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2">
-          {" "}
-          Verify Code
-        </button>
+        <Link to="/">
+          <button className="bg-[#145DB8] text-white rounded-md py-3 px-36 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2">
+            {" "}
+            Verify Code
+          </button>
+        </Link>
       </div>
     </div>
   );

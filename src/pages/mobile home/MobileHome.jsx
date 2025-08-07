@@ -14,14 +14,14 @@ const MobileHome = () => {
           </p>
         </div>
         <div className="flex justify-center items-center gap-2">
-          <Link to="/">
+          <Link to="/favourites">
             <img
               src="src\assets\icons\like.svg"
               alt="like"
               className="shadow-lg p-2 rounded-[11px]"
             />
           </Link>
-          <Link to="/">
+          <Link to="/notifications">
             <img
               src="src\assets\icons\Bell.png"
               alt="notification"
