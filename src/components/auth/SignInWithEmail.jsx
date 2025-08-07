@@ -33,7 +33,7 @@ function SignInWithEmail() {
         </p>
         <form
           action=""
-          className="flex flex-col mb-14 md:mb-0 md:gap-2 gap-[1.5rem] w-[374px] md:w-[420px]"
+          className="flex flex-col mb-14 md:mb-0 md:gap-2 gap-[1.5rem] w-[374px] sm:w-[374px] md:w-[420px]"
         >
           {/* EMAIL */}
           <label className="text-base md:block hidden" htmlFor="email">
