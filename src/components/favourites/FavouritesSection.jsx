@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FavouritesHeader from "./favouritesHeader";
+import FavouritesHeader from "./FavouritesHeader";
 
 import { FAVOURITES, HOSPITALS } from "../../data/favouritesData";
 import FavouriteItem from "./FavouriteItem";
