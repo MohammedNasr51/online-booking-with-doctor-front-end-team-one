@@ -28,6 +28,17 @@ import PaymentMethods from "./pages/profile/PaymentMethods";
 import PaymentCards from "./pages/profile/PaymentCards";
 import AddNewCard from "./pages/profile/AddNewCard";
 import DoctorFullPage from "./pages/Booking/DoctorFullPage";
+import Register from "./components/auth/Register";
+import SignInWithEmail from "./components/auth/SignInWithEmail";
+import SplashScreen from "./pages/Auth/SplashScreenPage";
+import Onboarding1Page from "./pages/Auth/Onboarding1Page";
+import Onboarding2Page from "./pages/Auth/Onboarding2Page";
+import SignInWithSocial from "./components/auth/SignInWithSocial";
+import SignInWithPhone from "./components/auth/SignInWithPhone";
+import OtpPhone from "./components/auth/OtpPhone";
+import ForgetPassword from "./components/auth/ForgetPassword";
+import CodeVerification from "./components/auth/CodeVerification";
+import ChangePassword from "./components/auth/ChangePassword";
 import { useEffect, useState } from "react";
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 900);
@@ -83,6 +94,20 @@ function App() {
             <Route path="method" element={<PaymentCards />} />
             <Route path="add-new-card" element={<AddNewCard />} />
           </Route>
+        </Route>
+
+        <Route path="/auth">
+          <Route index element={<SplashScreen />} />
+          <Route path="login" element={<SignInWithEmail />} />
+          <Route path="register" element={<Register />} />
+          <Route path="SignInWithSocial" element={<SignInWithSocial />} />
+          <Route path="SignInWithPhone" element={<SignInWithPhone />} />
+          <Route path="OtpPhone" element={<OtpPhone />} />
+          <Route path="ForgetPassword" element={<ForgetPassword />} />
+          <Route path="CodeVerification" element={<CodeVerification />} />
+          <Route path="ChangePassword" element={<ChangePassword />} />
+          <Route path="onboarding1" element={<Onboarding1Page />} />
+          <Route path="onboarding2" element={<Onboarding2Page />} />
         </Route>
       </Routes>
 
