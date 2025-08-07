@@ -1,9 +1,9 @@
 import MenuItem from "./MenuItem";
 import PROFILE_MENU_ITEMS from "../../data/profileMenuItems";
 import bellIcon from "../../assets/icons/bell.svg";
-import rightArrowIcon from "../../assets/icons/right-arrow-icon.svg";
 import { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 export default function MenuSection({ onLogout }) {
   const [notificationToggle, setNotificationToggle] = useState(true);
 

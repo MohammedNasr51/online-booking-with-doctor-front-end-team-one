@@ -9,13 +9,13 @@ import MobileAdv from "../../components/layout/MobileAdv";
 import workImage1 from "../../assets/images/Frame 1000001224.svg";
 import workImage2 from "../../assets/images/Frame 1000001226.svg";
 import workImage3 from "../../assets/images/Frame 1000001232.svg";
-import starVectorIcon from "../../assets/icons/Vector (1).png";
-import frameImage from "../../assets/images/Frame 1000001198.png";
-import calendarIcon from "../../assets/icons/calendar-02.png";
-import vectorIcon from "../../assets/icons/Vector.svg";
-import mapImage from "../../assets/images/Frame 1000001255.svg";
-import starIcon from "../../assets/icons/Star.svg";
-import clockIcon from "../../assets/icons/Clock Circle.svg";
+// import starVectorIcon from "../../assets/icons/Vector (1).png";
+// import frameImage from "../../assets/images/Frame 1000001198.png";
+// import calendarIcon from "../../assets/icons/calendar-02.png";
+// import vectorIcon from "../../assets/icons/Vector.svg";
+// import mapImage from "../../assets/images/Frame 1000001255.svg";
+// import starIcon from "../../assets/icons/Star.svg";
+// import clockIcon from "../../assets/icons/Clock Circle.svg";
 
 const Index = () => {
   console.log(topRatedDoctors);

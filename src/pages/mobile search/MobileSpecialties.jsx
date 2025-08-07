@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom";
 import { specialt } from "../../data/data";
 
+// Import icon
+import arrowLeftIcon from "../../assets/icons/arrow left.svg";
+
 const MobileSpecialties = () => {
   return (
     <>
       <div className="flex   gap-2 items-center mt-8 w-[90%] px-8 ">
         <Link to="/home">
-          <img src="src\assets\icons\arrow left.svg" alt="arrow left" />
+          <img src={arrowLeftIcon} alt="arrow left" />
         </Link>
         <h1 className="font-medium ml-[40%] text-[18px]">Specialties</h1>
       </div>
@@ -27,7 +30,6 @@ const MobileSpecialties = () => {
           </div>
         ))}
       </div>
-     
     </>
   );
 };

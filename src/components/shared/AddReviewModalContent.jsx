@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+// eslint-disable-next-line react/prop-types
 export default function AddReviewModalContent({onClose}) {
   return (
     <div className="flex flex-col items-center justify-center h-full">

@@ -1,5 +1,9 @@
 import { ListDoctor } from "../../data/data";
 
+// Import icons
+import starIcon from "../../assets/icons/Star.svg";
+import clockIcon from "../../assets/icons/Clock Circle.svg";
+
 const ListMap = () => {
   return (
     <div className="overflow-y-auto h-[90vh] py-8">
@@ -17,11 +21,11 @@ const ListMap = () => {
                 <p className="text-[#6D7379] text-[13px]">{doctor.specialty}</p>
                 <div className="flex justify-between items-center gap-[10px] my-2">
                   <div className="flex items-center gap-2">
-                    <img src="src\assets\icons\Star.svg" alt="rating" />
+                    <img src={starIcon} alt="rating" />
                     <span>{doctor.rating}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <img src="src\assets\icons\Clock Circle.svg" alt="rating" />
+                    <img src={clockIcon} alt="rating" />
                     <span>{doctor.date}</span>
                   </div>
                 </div>

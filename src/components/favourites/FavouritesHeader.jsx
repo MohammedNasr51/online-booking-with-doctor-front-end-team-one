@@ -1,4 +1,5 @@
 
+// eslint-disable-next-line react/prop-types
 export default function FavouritesHeader({ activeFavourites, setActiveFavourites }) {
   return (
     <header className="flex justify-between items-center mb-4 ">

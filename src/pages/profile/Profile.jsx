@@ -3,7 +3,7 @@ import MenuSection from "../../components/profile/MenuSection";
 import ProfileHeader from "../../components/profile/ProfileHeader";
 import Modal from "../../components/shared/Modal";
 import ModalContent from "../../components/shared/ModalContent";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/layout/Header";
 
 export default function Profile() {

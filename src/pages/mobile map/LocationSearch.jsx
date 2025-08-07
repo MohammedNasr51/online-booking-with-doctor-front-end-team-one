@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Specialties from "../doctor/Specialties";
 import MobileDoctorList from "../mobile home/MobileDoctorList";
 
 // Import images

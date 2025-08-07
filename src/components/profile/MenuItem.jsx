@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import rightArrowIcon from "../../assets/icons/right-arrow-icon.svg";
 
+/* eslint-disable react/prop-types */
+
 export default function MenuItem({ item ,onClick }) {
   return (
     <>
