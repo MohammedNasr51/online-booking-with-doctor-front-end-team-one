@@ -1,4 +1,4 @@
-import  { useRef } from "react";
+import { useRef } from "react";
 import { Link } from "react-router";
 import ArrowLeft from "../../assets/icons/ArrowLeft.png";
 function OtpPhone() {
@@ -23,40 +23,42 @@ function OtpPhone() {
     }
   };
   return (
-    <div className="relative flex flex-col h-screen items-center justify-start pt-40 md:justify-center">
-      <div className="">
-        <div className="flex items-center justify-center gap-20 text-lg font-[400] mb-4 d-block md:hidden absolute top-6 left-4">
-          <Link to="/SignInWithPhone">
-            <img className="" src={ArrowLeft} loading="lazy" alt="Back" />
-          </Link>
-          <p>OTP Code Verification</p>
-        </div>
-        <p className="text-center mb-14 text-[#404448]">
-          Code has been send to +02 010 *** **88
-        </p>
-        <div className="flex justify-center items-center gap-4 my-6">
-          {[0, 1, 2, 3].map((i) => (
-            <input
-              key={i}
-              type="text"
-              maxLength="1"
-              className="w-14 h-14 text-center text-xl border border-[#99A2AB] rounded-md focus:outline-none focus:ring-2 focus:ring-[#145DB8]"
-              onChange={(e) => handleChange(e, i)}
-              onKeyDown={(e) => handleKeyDown(e, i)}
-              ref={(el) => (inputs.current[i] = el)}
-            />
-          ))}
-        </div>
-        <p className="text-[#99A2AB] text-center mb-20">
-          Resend code in <span className="text-[#145DB8]">55</span> s
-        </p>
-        <Link to="/home">
-          <button className="bg-[#145DB8] text-white rounded-md py-3 px-36 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2">
-            {" "}
-            Verify Code
-          </button>
-        </Link>
+    <div className="relative flex flex-col h-screen justify-center">
+      <Link
+        className="md:hidden absolute top-6 left-4 flex items-center gap-4"
+        to="/login"
+      >
+        <img src={ArrowLeft} alt="Back" />
+      </Link>
+      <p className="md:hidden absolute top-5 left-1/2 -translate-x-1/2 text:md font-medium">
+        OTP Code Verification
+      </p>
+      <p className="text-center mb-14 text-[#404448]">
+        Code has been send to +02 010 *** **88
+      </p>
+      <div className="flex justify-center items-center gap-4 my-6">
+        {[0, 1, 2, 3].map((i) => (
+          <input
+            key={i}
+            type="text"
+            maxLength="1"
+            className="w-14 h-14 text-center text-xl border border-[#99A2AB] rounded-md focus:outline-none focus:ring-2 focus:ring-[#145DB8]"
+            onChange={(e) => handleChange(e, i)}
+            onKeyDown={(e) => handleKeyDown(e, i)}
+            ref={(el) => (inputs.current[i] = el)}
+          />
+        ))}
       </div>
+      <p className="text-[#99A2AB] text-center mb-20">
+        Resend code in <span className="text-[#145DB8]">55</span> s
+      </p>
+      <Link to="/home">
+        <button
+          className="w-[calc(100%-10px)] mx-auto bg-[#145DB8] text-white rounded-md py-3 text-center text-base font-medium block"
+        >
+          Verify Code
+        </button>
+      </Link>
     </div>
   );
 }

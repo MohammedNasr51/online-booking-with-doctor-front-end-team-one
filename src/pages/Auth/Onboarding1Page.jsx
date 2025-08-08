@@ -6,7 +6,7 @@ function Onboarding1Page() {
     <div className="relative flex flex-col items-center justify-around h-screen">
       <button>
         <Link to="/register" className="text-gray-500 text-lg absolute top-4 right-4">Skip</Link>
-        <img loading="lazy" src={Onboarding1} alt="Onboarding1" />
+        <img className="w-[220px]" src={Onboarding1} alt="Onboarding1" />
       </button>
       <div>
         <div>
@@ -32,12 +32,12 @@ function Onboarding1Page() {
       </div>
       <Link
         to="/onboarding2"
-        className="bg-[#145DB8] text-white text-lg text-center py-3 px-[176px] rounded"
+        className="bg-[#145DB8] text-white text-lg text-center mx-4 w-[calc(100%-10px)] py-2.5 rounded"
       >
         Next
       </Link>
     </div>
-  );
+  );  
 }
 
 export default Onboarding1Page;

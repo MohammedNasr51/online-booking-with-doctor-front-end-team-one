@@ -7,12 +7,10 @@ function CodeVerification() {
   const handleChange = (e, index) => {
     const value = e.target.value;
     if (/^\d$/.test(value)) {
-      // Move to next input
       if (index < 3) {
         inputs.current[index + 1].focus();
       }
     } else {
-      // Clear invalid input
       e.target.value = "";
     }
   };
@@ -23,20 +21,20 @@ function CodeVerification() {
     }
   };
   return (
-    <div className="relative flex flex-col h-screen items-center justify-start pt-40 md:justify-center">
-      <div className="">
-        <div className="flex items-center justify-center gap-28 text-lg font-[400] mb-4 d-block md:hidden absolute top-6 left-4">
-          <Link to="/ForgetPassword">
-            <img className="" src={ArrowLeft} loading="lazy" alt="Back" />
-          </Link>
-          <p>Code Verification</p>
-        </div>
+    <div className="relative flex flex-col justify-center items-center h-screen">
+        <Link
+          className="md:hidden absolute top-6 left-4 flex items-center gap-4"
+          to="/login"
+        >
+          <img src={ArrowLeft} alt="Back" className="w-5 h-5" />
+        </Link>
+        <p className="md:hidden absolute top-5 left-1/2 -translate-x-1/2 text-lg font-medium">
+          Code Verification
+        </p>
         <p className="text-center mb-2 text-[#404448]">
           Code has been send to your email
         </p>
-        <p className="text-center mb-14 text-[#404448]">
-          Check your Email
-        </p>
+        <p className="text-center mb-14 text-[#404448]">Check your Email</p>
         <div className="flex justify-center items-center gap-4 my-6">
           {[0, 1, 2, 3].map((i) => (
             <input
@@ -53,12 +51,13 @@ function CodeVerification() {
         <p className="text-[#99A2AB] text-center mb-20">
           Resend code in <span className="text-[#145DB8]">55</span> s
         </p>
-        <Link to="/ChangePassword" className="bg-[#145DB8] text-white rounded-md py-3 px-36 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2">
-          {" "}
+        <Link
+          to="/ChangePassword"
+          className="w-[calc(100%-10px)] bg-[#145DB8] text-white rounded-md py-3 text-center text-base font-medium block"
+        >
           Verify Code
         </Link>
       </div>
-    </div>
   );
 }
 
