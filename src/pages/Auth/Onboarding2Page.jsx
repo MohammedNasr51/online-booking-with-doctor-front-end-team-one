@@ -12,7 +12,7 @@ function Onboarding2Page() {
         >
           Skip
         </Link>
-        <img src={Onboarding2} alt="Onboarding1" />
+        <img className="w-[200px]" src={Onboarding2} alt="Onboarding1" />
       </div>
       <div>
         <div>
@@ -37,7 +37,7 @@ function Onboarding2Page() {
         </div>
       </div>
       <Link
-        className="bg-[#145DB8] text-white text-lg text-center py-3 px-[150px] rounded"
+        className="bg-[#145DB8] text-white text-lg text-center mx-4 w-[calc(100%-10px)] py-2.5 rounded"
         to="/SignInWithSocial"
       >
         Get Started

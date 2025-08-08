@@ -1,4 +1,3 @@
-
 import { Link } from "react-router";
 import ArrowLeft from "../../assets/icons/ArrowLeft.png";
 import LockIcon from "../../assets/icons/Key Square 3.png";
@@ -6,12 +5,15 @@ function ChangePassword() {
   return (
     <div className="relative flex flex-col h-screen items-center justify-start pt-40 md:justify-center">
       <div className="px-3 md:px-0">
-        <div className="flex items-center justify-center gap-24 text-lg font-[400] mb-4 d-block md:hidden absolute top-6 left-4">
-          <Link to="/ForgetPassword">
-            <img className="" src={ArrowLeft} alt="Back" />
-          </Link>
-          <p>Set new password</p>
-        </div>
+        <Link
+          className="md:hidden absolute top-6 left-4 flex items-center gap-4"
+          to="/login"
+        >
+          <img src={ArrowLeft} alt="Back" className="w-5 h-5" />
+        </Link>
+        <p className="md:hidden absolute top-5 left-1/2 -translate-x-1/2 text-lg font-medium">
+          Set new password
+        </p>
         <p className="text-start mb-5 font-[400]  text-[#404448]">
           Create a new password, ensure it different form your previous ones for
           security.
@@ -45,8 +47,9 @@ function ChangePassword() {
             />
           </div>
         </form>
-        <Link to="/login"
-          className="bg-[#145DB8] text-white rounded-md py-3 px-32 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2"
+        <Link
+          to="/login"
+          className="w-full bg-[#145DB8] text-white rounded-md py-3 text-center text-base font-medium block"
         >
           Reset Password
         </Link>

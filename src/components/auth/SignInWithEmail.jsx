@@ -11,10 +11,8 @@ import { Link } from "react-router";
 function SignInWithEmail() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
-
       <div className="md:absolute left-[20%] z-10">
         <Link to="/onboarding2">
-
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -72,13 +70,17 @@ function SignInWithEmail() {
             />
           </div>
 
-          <Link to="/ForgetPassword" className="md:text-[#145DB8] text-[#99A2AB] md:mt-2 -mt-3 mb-7 -ml-2 text-md text-end">
-
-
+          <Link
+            to="/ForgetPassword"
+            className="md:text-[#145DB8] text-[#99A2AB] md:mt-2 -mt-3 mb-7 -ml-2 text-md text-end"
+          >
             Forget the password?
           </Link>
 
-          <Link to="/home" className="text-center bg-[#145DB8] py-3 px-3 text-white rounded-md">
+          <Link
+            to="/home"
+            className="text-center bg-[#145DB8] py-3 px-3 text-white rounded-md"
+          >
             Sign in
           </Link>
           <div className="flex items-center gap-4 my-6">

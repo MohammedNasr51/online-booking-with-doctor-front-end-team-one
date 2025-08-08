@@ -13,10 +13,8 @@ import LockIcon from "../../assets/icons/Key Square 3.png";
 function Register() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
-
       <div className="md:absolute left-[20%] z-10">
         <Link to="/onboarding2">
-
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
