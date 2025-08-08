@@ -16,6 +16,7 @@ function Register() {
       <div className="md:absolute left-[20%] z-10">
         <Link to="/onboarding2">
           <img
+          loading="lazy"
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
             alt="Back"
@@ -25,6 +26,7 @@ function Register() {
         <img
           className="absolute md:-left-32 md:-top-16 left-[44%] top-24 w-[50px] h-[50px] md:w-[32px] md:h-[32px]"
           src={HeartImg}
+          loading="lazy"
           alt="HeartImg"
         />
 
@@ -46,6 +48,7 @@ function Register() {
           <div className="relative">
             <img
               src={UserIcon}
+              loading="lazy"
               alt="user icon"
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-80"
             />
@@ -65,6 +68,7 @@ function Register() {
             <img
               src={EmailIcon}
               alt="email icon"
+              loading="lazy"
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-4 opacity-80"
             />
             <input
@@ -83,6 +87,7 @@ function Register() {
             <img
               src={LockIcon}
               alt="lock icon"
+              loading="lazy"
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-80"
             />
             <input
@@ -143,6 +148,7 @@ function Register() {
             <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
               <img
                 className="text-lg w-[20px]"
+                loading="lazy"
                 src={FacebookImg}
                 alt="FacebookImg"
               />
@@ -151,11 +157,12 @@ function Register() {
               <img
                 className="text-lg w-[20px]"
                 src={GoogleImg}
+                loading="lazy"
                 alt="GoogleImg"
               />
             </a>
             <a className="border border-[#99A2AB] rounded-lg p-5">
-              <img className="text-lg w-[20px]" src={AppleImg} alt="AppleImg" />
+              <img className="text-lg w-[20px]" src={AppleImg} loading="lazy" alt="AppleImg" />
             </a>
           </ul>
 
@@ -169,12 +176,15 @@ function Register() {
       </div>
       <img
         src={CurveRight}
+        
         alt="Background Curve"
+        loading="lazy"
         className="absolute opacity-100 w-[930px] 2xl:w-[1254px] right-0 top-0  h-screen hidden xl:block"
       />
       <img
         src={LineCurve}
         alt="Background Curve"
+        loading="lazy"
         className="absolute w-[930px] 2xl:w-[1254px] right-[7px] top-0 opacity-100 h-screen hidden xl:block"
       />
     </div>

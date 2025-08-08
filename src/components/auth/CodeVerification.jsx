@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import  { useRef } from "react";
 import { Link } from "react-router";
 import ArrowLeft from "../../assets/icons/ArrowLeft.png";
 function CodeVerification() {

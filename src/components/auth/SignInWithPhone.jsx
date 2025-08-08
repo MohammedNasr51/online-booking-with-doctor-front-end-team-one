@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
 import FacebookImg from "../../assets/icons/FacebookImg.png";
 import AppleImg from "../../assets/icons/AppleImg.png";
@@ -9,21 +9,17 @@ import TelInput from "../profile/TelInput";
 
 function SignInWithPhone() {
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center px-4">
-      <Link to="/SignInWithSocial">
-        <img
-          className="block md:hidden absolute top-6 left-4 w-6 h-6"
-          src={ArrowLeft}
-          alt="Back"
-        />
-      </Link>
-      <div className="w-full max-w-sm flex flex-col items-center">
-        <img
-          className="mb-10 w-[60px] h-[60px] mx-auto"
-          src={HeartImg}
-          alt="Heart"
-        />
-        <h2 className="text-center mb-10 md:mb-6 text-3xl font-normal">
+    <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
+      <div className="">
+        <Link to="/SignInWithSocial">
+          <img
+            className="block md:hidden absolute top-6 left-4"
+            src={ArrowLeft}
+            alt="Back"
+          />
+        </Link>
+
+        <h2 className="text-center mb-10 md:mb-4 text-3xl font-[400]">
           Login to your Account
         </h2>
         <form className="w-full flex flex-col">
@@ -57,18 +53,18 @@ function SignInWithPhone() {
               <img
                 className="w-[20px] h-[20px]"
                 src={FacebookImg}
-                alt="Facebook"
+                alt="FacebookImg"
               />
             </a>
-          </li>
-          <li>
-            <a className="border border-[#99A2AB] rounded-lg p-4 block hover:shadow-md transition">
-              <img className="w-[20px] h-[20px]" src={GoogleImg} alt="Google" />
+            <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
+              <img
+                className="text-lg w-[20px]"
+                src={GoogleImg}
+                alt="GoogleImg"
+              />
             </a>
-          </li>
-          <li>
-            <a className="border border-[#99A2AB] rounded-lg p-4 block hover:shadow-md transition">
-              <img className="w-[20px] h-[20px]" src={AppleImg} alt="Apple" />
+            <a className="border border-[#99A2AB] rounded-lg p-5">
+              <img className="text-lg w-[20px]" src={AppleImg} alt="AppleImg" />
             </a>
           </li>
         </ul>

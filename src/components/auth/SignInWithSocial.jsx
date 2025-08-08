@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
 import FacebookImg from "../../assets/icons/FacebookImg.png";

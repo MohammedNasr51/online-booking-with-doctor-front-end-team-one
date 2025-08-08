@@ -22,6 +22,7 @@ function ChangePassword() {
           {/* EMAIL */}
           <div className="relative mb-6">
             <img
+              loading="lazy"
               src={LockIcon}
               alt="lock icon"
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-80"
@@ -36,6 +37,7 @@ function ChangePassword() {
           <div className="relative">
             <img
               src={LockIcon}
+              loading="lazy"
               alt="lock icon"
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-80"
             />
