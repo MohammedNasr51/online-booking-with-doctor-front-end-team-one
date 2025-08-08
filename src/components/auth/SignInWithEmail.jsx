@@ -25,10 +25,9 @@ function SignInWithEmail() {
             src={HeartImg}
             loading="lazy"
             alt="Heart"
-            className="w-[50px] h-[50px] mb-2
-               md:absolute md:top-[-4rem] md:left-[-8rem]"
+            className="w-[50px] h-[50px] md:absolute md:top-[-4rem] md:left-[-8rem]"
           />
-          <h2 className="mt-20 text-3xl font-[400]">Sign in</h2>
+          <h2 className="mt-10 text-3xl font-[400]">Sign in</h2>
         </div>
 
         <p className="hidden md:block text-[#6D7379] mb-7 text-sm">

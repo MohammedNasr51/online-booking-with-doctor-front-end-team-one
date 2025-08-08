@@ -12,35 +12,31 @@ import LockIcon from "../../assets/icons/Key Square 3.png";
 
 function Register() {
   return (
-    <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
-      <div className="md:absolute left-[20%] z-10">
+    <div className="relative flex flex-col h-screen items-stretch md:items-center justify-center">
+      <div className="xl:absolute left-[20%] z-10">
         <Link to="/onboarding2">
           <img
-          loading="lazy"
+            loading="lazy"
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
             alt="Back"
           />
         </Link>
 
-        <img
-          className="absolute md:-left-32 md:-top-16 left-[44%] top-24 w-[50px] h-[50px] md:w-[32px] md:h-[32px]"
-          src={HeartImg}
-          loading="lazy"
-          alt="HeartImg"
-        />
-
-        <h2 className="text-center mb-10 md:mb-4 text-3xl font-[400]">
-          Create New Account
-        </h2>
+        <div className="text-center mb-4 flex flex-col items-center">
+          <img
+            src={HeartImg}
+            loading="lazy"
+            alt="Heart"
+            className="w-[50px] h-[50px] md:absolute md:top-[-4rem] md:left-[-8rem]"
+          />
+          <h2 className="mt-5 text-3xl font-[400]">Create New Account</h2>
+        </div>
         <p className="text-[#6D7379] md:block hidden mb-7 text-sm">
           Please provide all information required to create your account
         </p>
 
-        <form
-          action=""
-          className="flex flex-col mb-14 md:mb-0 md:gap-2 gap-[1.2rem] w-[374px] md:w-[420px]"
-        >
+        <form action="" className="flex flex-col mx-2 md:mx-0">
           {/* NAME */}
           <label className="text-base md:block hidden" htmlFor="name">
             Name
@@ -53,7 +49,7 @@ function Register() {
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-80"
             />
             <input
-              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full"
+              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full mt-2 mb-4"
               type="text"
               id="name"
               placeholder="Name"
@@ -72,7 +68,7 @@ function Register() {
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-4 opacity-80"
             />
             <input
-              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full"
+              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full mt-2 mb-4"
               type="email"
               id="email"
               placeholder="Email"
@@ -91,7 +87,7 @@ function Register() {
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-80"
             />
             <input
-              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full"
+              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full mt-2 mb-4"
               type="password"
               id="password"
               placeholder="Password"
@@ -144,8 +140,8 @@ function Register() {
             <hr className="flex-grow border-t border-gray-300" />
           </div>
 
-          <ul className="flex items-center justify-center md:gap-4 mb-6">
-            <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
+          <ul className="flex items-center justify-around md:gap-4 mb-6">
+            <a className="border border-[#99A2AB] rounded-lg p-5">
               <img
                 className="text-lg w-[20px]"
                 loading="lazy"
@@ -153,7 +149,7 @@ function Register() {
                 alt="FacebookImg"
               />
             </a>
-            <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
+            <a className="border border-[#99A2AB] rounded-lg p-5">
               <img
                 className="text-lg w-[20px]"
                 src={GoogleImg}
@@ -162,7 +158,12 @@ function Register() {
               />
             </a>
             <a className="border border-[#99A2AB] rounded-lg p-5">
-              <img className="text-lg w-[20px]" src={AppleImg} loading="lazy" alt="AppleImg" />
+              <img
+                className="text-lg w-[20px]"
+                src={AppleImg}
+                loading="lazy"
+                alt="AppleImg"
+              />
             </a>
           </ul>
 
@@ -176,7 +177,6 @@ function Register() {
       </div>
       <img
         src={CurveRight}
-        
         alt="Background Curve"
         loading="lazy"
         className="absolute opacity-100 w-[930px] 2xl:w-[1254px] right-0 top-0  h-screen hidden xl:block"
