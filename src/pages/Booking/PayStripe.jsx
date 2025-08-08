@@ -94,7 +94,7 @@ export default function PayStripe() {
         </div>
       </div>
       <div className="w-full absolute bottom-0">
-     <PayFooter title="Pay" nav="/profile" />
+     <PayFooter title="Pay" nav="/myBooking" />
       </div>
     </div>
   );

@@ -40,7 +40,7 @@ export default function EditProfile() {
           <button
             type="button"
             onClick={() => fileInputRef.current.click()}
-            className="w-[24px] h-[24px] absolute left-[62%] top-[78px] bg-gradient-to-l from-[#145eb885] to-[#ffffff98]  rounded-full p-[1px] shadow-md hover:bg-gray-100 transition-colors"
+            className="w-[24px] h-[24px] absolute left-[62%] top-[78px] sm:left-[55%] lg:left-[53%] bg-gradient-to-l from-[#145eb885] to-[#ffffff98]  rounded-full p-[1px] shadow-md hover:bg-gray-100 transition-colors"
           >
             <div className="flex items-center justify-center w-full h-full bg-white/75 rounded-full  ">
               <img

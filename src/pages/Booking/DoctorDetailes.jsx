@@ -1,4 +1,4 @@
-import profileIcon from "../../assets/icons/profile.svg";
+import profileIcon from "../../assets/icons/profileCard.svg";
 import meesageIcon from "../../assets/icons/messages.svg";
 import medalIcon from "../../assets/icons/medal.svg";
 import starIcon from "../../assets/icons/star.png";

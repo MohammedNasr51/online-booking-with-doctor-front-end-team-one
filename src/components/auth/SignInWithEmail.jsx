@@ -1,4 +1,3 @@
-import React from "react";
 import HeartImg from "../../assets/icons/BsHeartPulse.png";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
 import FacebookImg from "../../assets/icons/FacebookImg.png";
@@ -12,8 +11,10 @@ import { Link } from "react-router";
 function SignInWithEmail() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
-      <div className="xl:absolute left-[20%] z-10">
-        <Link to="/auth/onboarding2">
+
+      <div className="md:absolute left-[20%] z-10">
+        <Link to="/onboarding2">
+
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -70,16 +71,16 @@ function SignInWithEmail() {
               placeholder="Password"
             />
           </div>
-          <Link
-            to="/auth/ForgetPassword"
-            className="md:text-[#145DB8] text-[#99A2AB] md:mt-2 -mt-3 mb-7 -ml-2 text-md text-end"
-          >
+
+          <Link to="/ForgetPassword" className="md:text-[#145DB8] text-[#99A2AB] md:mt-2 -mt-3 mb-7 -ml-2 text-md text-end">
+
+
             Forget the password?
           </Link>
 
-          <button className="bg-[#145DB8] py-3 px-3 text-white rounded-md">
+          <Link to="/home" className="text-center bg-[#145DB8] py-3 px-3 text-white rounded-md">
             Sign in
-          </button>
+          </Link>
           <div className="flex items-center gap-4 my-6">
             <hr className="flex-grow border-t border-gray-300" />
             <div className="text-[#99A2AB] text-[20px]">or</div>
@@ -98,7 +99,7 @@ function SignInWithEmail() {
           </ul>
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#99A2AB]">Don’t have an account?</p>
-            <Link to="/auth/register" className="text-[#145DB8]">
+            <Link to="/register" className="text-[#145DB8]">
               Sign up
             </Link>
           </div>

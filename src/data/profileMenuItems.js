@@ -41,6 +41,7 @@ const PROFILE_MENU_ITEMS = [
     id: 6,
     icon: logoutIcon,
     title: "Logout",
+    
   },
 ];
 

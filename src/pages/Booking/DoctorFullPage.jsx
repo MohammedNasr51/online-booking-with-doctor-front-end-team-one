@@ -6,7 +6,7 @@ import yellowstarIcon from "../../assets/icons/yellowstar.png";
 import stars from "../../assets/icons/stars.png";
 import penIcon from "../../assets/icons/pen.png";
 import patient from "../../assets/images/nabila.png";
-import profileIcon from "../../assets/icons/profile.svg";
+import profileIcon from "../../assets/icons/profileCard.svg";
 import meesageIcon from "../../assets/icons/messages.svg";
 import medalIcon from "../../assets/icons/medal.svg";
 import doctorlogo from "../../assets/images/doctor.png";
@@ -68,7 +68,9 @@ export default function DoctorFullPage() {
         {/* left side */}
         <div className="w-[75%] flex flex-col">
       <div className="ml-4 flex gap-3 items-center mb-8">
+        <Link to="/">
         <img src={arrowRight} alt="back" className="rotate-180 w-4 h-4" />
+        </Link>
         <h2 className="text-gray-700 ">Make an Appoinment</h2>
       </div>
           {/* top */}

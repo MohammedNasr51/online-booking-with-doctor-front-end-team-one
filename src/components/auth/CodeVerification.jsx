@@ -26,7 +26,7 @@ function CodeVerification() {
     <div className="relative flex flex-col h-screen items-center justify-start pt-40 md:justify-center">
       <div className="">
         <div className="flex items-center justify-center gap-28 text-lg font-[400] mb-4 d-block md:hidden absolute top-6 left-4">
-          <Link to="/auth/ForgetPassword">
+          <Link to="/ForgetPassword">
             <img className="" src={ArrowLeft} alt="Back" />
           </Link>
           <p>Code Verification</p>
@@ -53,7 +53,7 @@ function CodeVerification() {
         <p className="text-[#99A2AB] text-center mb-20">
           Resend code in <span className="text-[#145DB8]">55</span> s
         </p>
-        <Link to="/auth/ChangePassword" className="bg-[#145DB8] text-white rounded-md py-3 px-36 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2">
+        <Link to="/ChangePassword" className="bg-[#145DB8] text-white rounded-md py-3 px-36 m-auto my-5 text-base font-[400] flex items-center justify-center gap-2">
           {" "}
           Verify Code
         </Link>

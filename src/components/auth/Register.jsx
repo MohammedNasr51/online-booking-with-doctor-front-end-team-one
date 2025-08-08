@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router";
 import HeartImg from "../../assets/icons/BsHeartPulse.png";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
@@ -14,8 +13,10 @@ import LockIcon from "../../assets/icons/Key Square 3.png";
 function Register() {
   return (
     <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
-      <div className="xl:absolute left-[20%] z-10">
-        <Link to="/auth/onboarding2">
+
+      <div className="md:absolute left-[20%] z-10">
+        <Link to="/onboarding2">
+
           <img
             className="block md:hidden absolute top-6 left-4"
             src={ArrowLeft}
@@ -128,7 +129,7 @@ function Register() {
           </div>
 
           <Link
-            to="/auth/register"
+            to="/login"
             className="bg-[#145DB8] py-3 px-3 text-center text-white rounded-md"
           >
             Create an account
@@ -162,7 +163,7 @@ function Register() {
 
           <div className="flex items-center justify-center gap-2">
             <p className="text-[#99A2AB]">Already have an account!</p>
-            <Link to="/auth/login" className="text-[#145DB8]">
+            <Link to="/login" className="text-[#145DB8]">
               Sign in
             </Link>
           </div>
