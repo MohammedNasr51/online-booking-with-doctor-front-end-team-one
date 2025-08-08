@@ -11,7 +11,7 @@ function ForgetPassword() {
       >
         <img src={ArrowLeft} alt="Back" className="w-5 h-5" />
       </Link>
-      <p className="md:hidden absolute top-5 left-1/2 -translate-x-1/2 text-lg font-medium">
+      <p className="md:hidden absolute top-5 left-1/2 -translate-x-1/2 text-md font-medium">
         Forget your password
       </p>
       <div className="w-full max-w-sm">

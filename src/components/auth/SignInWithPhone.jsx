@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import GoogleImg from "../../assets/icons/GoogleImg.png";
 import FacebookImg from "../../assets/icons/FacebookImg.png";
 import AppleImg from "../../assets/icons/AppleImg.png";
@@ -9,22 +9,26 @@ import TelInput from "../profile/TelInput";
 
 function SignInWithPhone() {
   return (
-    <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
-      <div className="">
-        <Link to="/SignInWithSocial">
-          <img
-            className="block md:hidden absolute top-6 left-4"
-            src={ArrowLeft}
-            alt="Back"
-          />
-        </Link>
-
-        <h2 className="text-center mb-10 md:mb-4 text-3xl font-[400]">
+    <div className="relative h-screen flex flex-col items-center justify-center px-4">
+      <Link to="/SignInWithSocial">
+        <img
+          className="block md:hidden absolute top-6 left-4"
+          src={ArrowLeft}
+          alt="Back"
+        />
+      </Link>
+      <div className="w-full max-w-sm flex flex-col items-center">
+        <img
+          className="mb-10 w-[60px] h-[60px] mx-auto"
+          src={HeartImg}
+          alt="Heart"
+        />
+        <h2 className="text-center mb-10 md:mb-6 text-3xl font-normal">
           Login to your Account
         </h2>
         <form className="w-full flex flex-col">
           <TelInput />
-          <div className="mb-6 md:hidden flex items-center justify-center">
+          <div className="mb-6 md:hidden flex items-center justify-center mt-4">
             <label className="flex items-center" htmlFor="terms-mobile">
               <input
                 type="checkbox"
@@ -36,7 +40,7 @@ function SignInWithPhone() {
           </div>
           <Link
             to="/OtpPhone"
-            className="w-full bg-[#145DB8] py-3 text-center text-white rounded-md mt-4"
+            className="w-full mt-4 bg-[#145DB8] py-3 text-center text-white rounded-md"
           >
             Sign in
           </Link>
@@ -53,18 +57,18 @@ function SignInWithPhone() {
               <img
                 className="w-[20px] h-[20px]"
                 src={FacebookImg}
-                alt="FacebookImg"
+                alt="Facebook"
               />
             </a>
-            <a className="border border-[#99A2AB] rounded-lg p-5 mr-24">
-              <img
-                className="text-lg w-[20px]"
-                src={GoogleImg}
-                alt="GoogleImg"
-              />
+          </li>
+          <li>
+            <a className="border border-[#99A2AB] rounded-lg p-4 block hover:shadow-md transition">
+              <img className="w-[20px] h-[20px]" src={GoogleImg} alt="Google" />
             </a>
-            <a className="border border-[#99A2AB] rounded-lg p-5">
-              <img className="text-lg w-[20px]" src={AppleImg} alt="AppleImg" />
+          </li>
+          <li>
+            <a className="border border-[#99A2AB] rounded-lg p-4 block hover:shadow-md transition">
+              <img className="w-[20px] h-[20px]" src={AppleImg} alt="Apple" />
             </a>
           </li>
         </ul>

@@ -53,7 +53,7 @@ function CodeVerification() {
         </p>
         <Link
           to="/ChangePassword"
-          className="w-[calc(100%-10px)] bg-[#145DB8] text-white rounded-md py-3 text-center text-base font-medium"
+          className="w-[calc(100%-10px)] bg-[#145DB8] text-white rounded-md py-3 text-center text-base font-medium block"
         >
           Verify Code
         </Link>

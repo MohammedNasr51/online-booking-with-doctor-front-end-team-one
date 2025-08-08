@@ -10,8 +10,8 @@ import LockIcon from "../../assets/icons/Key Square 3.png";
 import { Link } from "react-router";
 function SignInWithEmail() {
   return (
-    <div className="relative flex flex-col h-screen items-center md:justify-center justify-end">
-      <div className="md:absolute left-[20%] z-10">
+    <div className="relative flex flex-col h-screen items-stretch md:items-center justify-center">
+      <div className="xl:absolute left-[20%] z-10">
         <Link to="/onboarding2">
           <img
             className="block md:hidden absolute top-6 left-4"
@@ -20,22 +20,21 @@ function SignInWithEmail() {
             loading="lazy"
           />
         </Link>
+        <div className="text-center mb-4 flex flex-col items-center">
+          <img
+            src={HeartImg}
+            loading="lazy"
+            alt="Heart"
+            className="w-[50px] h-[50px] mb-2
+               md:absolute md:top-[-4rem] md:left-[-8rem]"
+          />
+          <h2 className="mt-20 text-3xl font-[400]">Sign in</h2>
+        </div>
 
-        <img
-          className="absolute md:-left-32 md:-top-16 left-[44%] top-24 w-[50px] h-[50px] md:w-[32px] md:h-[32px]"
-          src={HeartImg}
-          loading="lazy"
-        />
-        <h2 className="text-center mb-10 md:mb-4 text-3xl font-[400]">
-          Sign in
-        </h2>
         <p className="hidden md:block text-[#6D7379] mb-7 text-sm">
           Please provide all information required to access your account{" "}
         </p>
-        <form
-          action=""
-          className="flex flex-col mb-14 md:mb-0 md:gap-2 gap-[1.5rem] w-[374px] sm:w-[374px] md:w-[420px]"
-        >
+        <form action="" className="flex flex-col mx-2 md:mx-0">
           {/* EMAIL */}
           <label className="text-base md:block hidden" htmlFor="email">
             Email
@@ -48,7 +47,7 @@ function SignInWithEmail() {
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-4 opacity-80"
             />
             <input
-              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full"
+              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full mt-2 mb-4"
               type="email"
               id="email"
               placeholder="Email"
@@ -67,7 +66,7 @@ function SignInWithEmail() {
               className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 opacity-80"
             />
             <input
-              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full"
+              className="border border-[#99A2AB] p-3 pl-11 rounded-lg w-full mt-2 mb-4"
               type="password"
               id="password"
               placeholder="Password"
@@ -87,29 +86,44 @@ function SignInWithEmail() {
           >
             Sign in
           </Link>
-          <div className="flex items-center gap-4 my-6">
-            <hr className="flex-grow border-t border-gray-300" />
-            <div className="text-[#99A2AB] text-[20px]">or</div>
-            <hr className="flex-grow border-t border-gray-300" />
-          </div>
-          <ul className="flex items-center justify-center md:gap-4 mb-6">
-            <a className="border  border-[#99A2AB] rounded-lg p-5 mr-24">
-              <img loading="lazy" className="w-[20px]" src={FacebookImg} alt="FacebookImg" />
-            </a>
-            <a className="border  border-[#99A2AB] rounded-lg p-5 mr-24">
-              <img loading="lazy" className="w-[20px]" src={GoogleImg} alt="GoogleImg" />
-            </a>
-            <a className="border  border-[#99A2AB] rounded-lg p-5">
-              <img loading="lazy" className="w-[20px]" src={AppleImg} alt="AppleImg" />
-            </a>
-          </ul>
-          <div className="flex items-center justify-center gap-2">
-            <p className="text-[#99A2AB]">Don’t have an account?</p>
-            <Link to="/register" className="text-[#145DB8]">
-              Sign up
-            </Link>
-          </div>
         </form>
+        <div className="flex items-center gap-4 my-6">
+          <hr className="flex-grow border-t border-gray-300" />
+          <div className="text-[#99A2AB] text-[20px]">or</div>
+          <hr className="flex-grow border-t border-gray-300" />
+        </div>
+        <ul className="flex items-center justify-around md:gap-4 mb-6">
+          <a className="border border-[#99A2AB] rounded-lg p-5">
+            <img
+              loading="lazy"
+              className="w-[20px]"
+              src={FacebookImg}
+              alt="FacebookImg"
+            />
+          </a>
+          <a className="border border-[#99A2AB] rounded-lg p-5">
+            <img
+              loading="lazy"
+              className="w-[20px]"
+              src={GoogleImg}
+              alt="GoogleImg"
+            />
+          </a>
+          <a className="border border-[#99A2AB] rounded-lg p-5">
+            <img
+              loading="lazy"
+              className="w-[20px]"
+              src={AppleImg}
+              alt="AppleImg"
+            />
+          </a>
+        </ul>
+        <div className="flex items-center justify-center gap-2">
+          <p className="text-[#99A2AB]">Don’t have an account?</p>
+          <Link to="/register" className="text-[#145DB8]">
+            Sign up
+          </Link>
+        </div>
       </div>
       <img
         src={CurveRight}
